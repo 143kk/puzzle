@@ -1,5 +1,6 @@
 module game_control(
     input [4:0] I_num,
+    output [4:0] O_num,
     input I_clk,
     input I_rst_n,
     input I_btn_set, 
@@ -34,8 +35,12 @@ permutation perm_inst(
 );
 
 always @(posedge I_clk, negedge I_rst_n) begin
-    if(~I_rst_n) 
-        {O_pos_a, O_pos_b, O_pos_c, O_pos_d} <= 8'b00_01_10_11;
+    if(~I_rst_n) begin
+        O_pos_a <= 2'b00;
+        O_pos_b <= 2'b01;
+        O_pos_c <= 2'b10;
+        O_pos_d <= 2'b11;
+    end
     else if(I_btn_set) begin
         if(num_valid) begin
             O_pos_a <= pos_a_native;

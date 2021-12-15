@@ -38,6 +38,8 @@ module top(
     wire [1:0] pos_c;
     wire [1:0] pos_d;
 
+    reg [4:0] num;
+
     // 生成25MHz的clk
     clk_25m clk_25m(.resetn(I_rst_n), .clk_in1(I_clk_100M), .clk_out1(W_clk_25M));
 
@@ -85,6 +87,7 @@ module top(
         .O_pos_c(pos_c),
         .O_pos_d(pos_d),
         .O_completed(O_completed),
+        .O_num(num),
         
         .I_btn_set(I_btn_set), 
         .I_btn_left(I_btn_left), 
@@ -92,7 +95,7 @@ module top(
         .I_btn_up(I_btn_up), 
         .I_btn_down(I_btn_down),
         .I_black_EN(I_black_EN),
-        .I_clk(I_clk_25M)
+        .I_clk(W_clk_25M)
     );
 
     img_mem_ctrl imc_inst(
