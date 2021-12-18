@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Wed Dec  8 22:50:19 2021
+| Date         : Sat Dec 18 22:05:10 2021
 | Host         : DESKTOP-VV69JL5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -22,8 +22,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     9 |
-| Unused register locations in slices containing registers |    31 |
+| Number of unique control sets                            |    33 |
+| Unused register locations in slices containing registers |   132 |
 +----------------------------------------------------------+-------+
 
 
@@ -33,42 +33,70 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              44 |           15 |
-| No           | No                    | Yes                    |              38 |           21 |
-| No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |              13 |            5 |
-| Yes          | No                    | Yes                    |              28 |           11 |
-| Yes          | Yes                   | No                     |               6 |            1 |
+| No           | No                    | No                     |             103 |           37 |
+| No           | No                    | Yes                    |             156 |           60 |
+| No           | Yes                   | No                     |              82 |           26 |
+| Yes          | No                    | No                     |              31 |           16 |
+| Yes          | No                    | Yes                    |              90 |           32 |
+| Yes          | Yes                   | No                     |              14 |            6 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 3. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------+------------------------------------+---------------------------+------------------+----------------+
-|                   Clock Signal                  |            Enable Signal           |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
-+-------------------------------------------------+------------------------------------+---------------------------+------------------+----------------+
-|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/OversamplingTick   |                           |                1 |              1 |
-|  clk_25m/inst/clk_out1                          | rx_inst//i__n_0                    |                           |                1 |              4 |
-|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/E[0]               | rx_inst/GapCnt[5]_i_1_n_0 |                1 |              6 |
-|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/RxD_data_reg[0][0] |                           |                3 |              8 |
-|  gamectrl_inst/perm_inst/O_pos_a_reg[1]_i_1_n_0 |                                    |                           |                3 |              8 |
-|  clk_25m/inst/clk_out1                          | vga_inst/R_v_cnt[9]_i_1_n_0        | vga_inst/O_red_reg[3]_0   |                7 |             10 |
-|  clk_25m/inst/clk_out1                          | rx_inst/E[0]                       | vga_inst/O_red_reg[3]_0   |                4 |             18 |
-|  clk_25m/inst/clk_out1                          |                                    |                           |               12 |             36 |
-|  clk_25m/inst/clk_out1                          |                                    | vga_inst/O_red_reg[3]_0   |               21 |             38 |
-+-------------------------------------------------+------------------------------------+---------------------------+------------------+----------------+
++-------------------------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+
+|                   Clock Signal                  |                Enable Signal               |             Set/Reset Signal            | Slice Load Count | Bel Load Count |
++-------------------------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+
+|  clk_25m/inst/clk_out1                          | ass_up/t2                                  | ass_left/t1_reg_0                       |                1 |              1 |
+|  clk_25m/inst/clk_out1                          | ass_right/t2                               | ass_left/t1_reg_0                       |                1 |              1 |
+|  clk_25m/inst/clk_out1                          | ass_left/t2                                | ass_left/t1_reg_0                       |                1 |              1 |
+|  clk_25m/inst/clk_out1                          | ass_down/t2                                | ass_left/t1_reg_0                       |                1 |              1 |
+|  I_clk_100M_IBUF_BUFG                           |                                            | sc_inst/seg_en[1]_i_1_n_0               |                1 |              1 |
+|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/OversamplingTick           |                                         |                1 |              1 |
+|  sc_inst/clk_1ms                                |                                            | ml_top_inst/counter/cnt_second_reg[0]_0 |                2 |              2 |
+|  sc_inst/clk_1ms                                | sc_inst/cen                                | ml_top_inst/counter/cnt_second_reg[0]_0 |                1 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/ms100                              | ml_top_inst/counter/cnt_second_reg[0]_0 |                1 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/ms10                               | ml_top_inst/counter/cnt_second_reg[0]_0 |                1 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/s1                                 | ml_top_inst/counter/cnt_second_reg[0]_0 |                1 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/s3                                 | ml_top_inst/counter/cnt_second_reg[0]_0 |                2 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/s2                                 | ml_top_inst/counter/cnt_second_reg[0]_0 |                2 |              4 |
+|  sc_inst/clk_1ms                                | sc_inst/s4                                 | ml_top_inst/counter/cnt_second_reg[0]_0 |                2 |              4 |
+|  clk_25m/inst/clk_out1                          | rx_inst/__0/i__n_0                         |                                         |                2 |              4 |
+|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/GapCnt_reg[0][0]           | rx_inst/GapCnt[5]_i_1_n_0               |                1 |              6 |
+|  I_clk_100M_IBUF_BUFG                           | sc_inst/num0                               |                                         |                5 |              7 |
+|  gamectrl_inst/perm_inst/O_pos_a_reg[1]_i_1_n_0 |                                            |                                         |                4 |              8 |
+|  I_clk_100M_IBUF_BUFG                           | ml_top_inst/l/melody_reg[0]                | ml_top_inst/l/melody_reg[4]             |                5 |              8 |
+|  clk_25m/inst/clk_out1                          | rx_inst/tickgen/E[0]                       |                                         |                3 |              8 |
+|  clk_25m/inst/clk_out1                          | vga_inst/R_v_cnt[9]_i_1_n_0                | ass_left/t1_reg_0                       |                6 |             10 |
+|  I_clk_100M_IBUF_BUFG                           | ml_top_inst/l/melody_reg[0]                |                                         |                5 |             11 |
+|  I_clk_100M_IBUF_BUFG                           | ml_top_inst/counter/cnt_second[13]_i_1_n_0 | ml_top_inst/counter/cnt_second_reg[0]_0 |                3 |             14 |
+|  I_clk_100M_IBUF_BUFG                           | ml_top_inst/counter/E[0]                   | ml_top_inst/counter/cnt_second_reg[0]_0 |                4 |             16 |
+|  I_clk_100M_IBUF_BUFG                           |                                            | sc_inst/fenpin[17]_i_1_n_0              |                5 |             17 |
+|  clk_25m/inst/clk_out1                          | rx_inst/E[0]                               | ml_top_inst/counter/cnt_second_reg[0]_0 |                5 |             18 |
+|  clk_25m/inst/clk_out1                          |                                            | ml_top_inst/counter/cnt_second_reg[0]_0 |               10 |             20 |
+|  I_clk_100M_IBUF_BUFG                           |                                            | ml_top_inst/counter/cnt_second_reg[0]_0 |                7 |             20 |
+|  I_clk_100M_IBUF_BUFG                           |                                            | ml_top_inst/m/index[31]_i_1_n_0         |               12 |             32 |
+|  I_clk_100M_IBUF_BUFG                           |                                            | ml_top_inst/m/clear                     |                8 |             32 |
+|  clk_25m/inst/clk_out1                          |                                            |                                         |               13 |             36 |
+|  I_clk_100M_IBUF_BUFG                           |                                            |                                         |               20 |             59 |
+|  clk_25m/inst/clk_out1                          |                                            | ass_left/t1_reg_0                       |               41 |            114 |
++-------------------------------------------------+--------------------------------------------+-----------------------------------------+------------------+----------------+
 
 
 +--------+-----------------------+
 | Fanout | Number of ControlSets |
 +--------+-----------------------+
-| 1      |                     1 |
-| 4      |                     1 |
+| 1      |                     6 |
+| 2      |                     1 |
+| 4      |                     8 |
 | 6      |                     1 |
-| 8      |                     2 |
+| 7      |                     1 |
+| 8      |                     3 |
 | 10     |                     1 |
-| 16+    |                     3 |
+| 11     |                     1 |
+| 14     |                     1 |
+| 16+    |                    10 |
 +--------+-----------------------+
 
 

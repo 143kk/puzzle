@@ -1,6 +1,5 @@
 module game_control(
     input [4:0] I_num,
-    output [4:0] O_num,
     input I_clk,
     input I_rst_n,
     input I_btn_set, 

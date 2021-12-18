@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed Dec  8 22:48:55 2021
-# Process ID: 4616
+# Start of session at: Sat Dec 18 22:03:21 2021
+# Process ID: 3900
 # Current directory: C:/Users/Arv/puzzle/puzzle.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Arv/puzzle/puzzle.runs/synth_1/top.vds
@@ -15,13 +15,77 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 11120 
+INFO: Helper process launched with PID 10532 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 343.004 ; gain = 101.141
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 342.785 ; gain = 101.270
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:1]
-INFO: [Synth 8-638] synthesizing module 'clk_25m' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_25m' (1#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_25m' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_25m' (1#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'check' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v:2]
+INFO: [Synth 8-256] done synthesizing module 'check' (2#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v:2]
+INFO: [Synth 8-638] synthesizing module 'music_led_top' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music_led_top.v:2]
+INFO: [Synth 8-638] synthesizing module 'led_music_control' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_music_ctrl.v:2]
+INFO: [Synth 8-256] done synthesizing module 'led_music_control' (3#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_music_ctrl.v:2]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_counter.v:2]
+INFO: [Synth 8-256] done synthesizing module 'counter' (4#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_counter.v:2]
+INFO: [Synth 8-638] synthesizing module 'flash_led' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/flash_led.v:2]
+INFO: [Synth 8-256] done synthesizing module 'flash_led' (5#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/flash_led.v:2]
+INFO: [Synth 8-638] synthesizing module 'Music' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:3]
+	Parameter do_low bound to: 191110 - type: integer 
+	Parameter re_low bound to: 170259 - type: integer 
+	Parameter me_low bound to: 151685 - type: integer 
+	Parameter fa_low bound to: 143172 - type: integer 
+	Parameter so_low bound to: 127554 - type: integer 
+	Parameter la_low bound to: 113636 - type: integer 
+	Parameter si_low bound to: 101239 - type: integer 
+	Parameter do bound to: 93941 - type: integer 
+	Parameter re bound to: 85136 - type: integer 
+	Parameter me bound to: 75838 - type: integer 
+	Parameter fa bound to: 71582 - type: integer 
+	Parameter so bound to: 63776 - type: integer 
+	Parameter la bound to: 56818 - type: integer 
+	Parameter si bound to: 50618 - type: integer 
+	Parameter do_high bound to: 47778 - type: integer 
+	Parameter re_high bound to: 42567 - type: integer 
+	Parameter me_high bound to: 37921 - type: integer 
+	Parameter fa_high bound to: 36498 - type: integer 
+	Parameter so_high bound to: 31888 - type: integer 
+	Parameter la_high bound to: 28409 - type: integer 
+	Parameter si_high bound to: 25309 - type: integer 
+	Parameter beat bound to: 20000000 - type: integer 
+	Parameter gap bound to: 5000000 - type: integer 
+	Parameter index_period bound to: 25000000 - type: integer 
+	Parameter silence bound to: 1650065408 - type: integer 
+	Parameter Star bound to: 240'b010000100001100011000110101101011000000001011010110101001010010010100101000000000110001100010110101101010010100100100000011000110001011010110101001010010010000001000010000110001100011010110101100000000101101011010100101001001010010100000000 
+	Parameter HappyBirthday bound to: 130'b0111110000011111000110010000000000001101011100111110001100110110001111011111000001100011010110001110011100111101100011010010100101 
+	Parameter MerryChristmas bound to: 335'b01111011110111101110100000110101100011001001101111100001000110000000000110001100011010111001111011100000001110011110111101111011000000001111011110111010000011010110001100000000110101111100001000110010100011000100000011000110000000011000111001111100001000110000100000000001101000000000001101011010111001111100000111101111000000110001100 
+	Parameter ST_length bound to: 46 - type: integer 
+	Parameter HB_length bound to: 26 - type: integer 
+	Parameter MC_length bound to: 67 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Music' (6#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:3]
+INFO: [Synth 8-256] done synthesizing module 'music_led_top' (7#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music_led_top.v:2]
+INFO: [Synth 8-638] synthesizing module 'second_counter' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:22]
+	Parameter SEG_NUM0 bound to: 8'b01000000 
+	Parameter SEG_NUM1 bound to: 8'b01111001 
+	Parameter SEG_NUM2 bound to: 8'b00100100 
+	Parameter SEG_NUM3 bound to: 8'b00110000 
+	Parameter SEG_NUM4 bound to: 8'b00011001 
+	Parameter SEG_NUM5 bound to: 8'b00010010 
+	Parameter SEG_NUM6 bound to: 8'b00000010 
+	Parameter SEG_NUM7 bound to: 8'b01111000 
+	Parameter SEG_NUM8 bound to: 8'b00000000 
+	Parameter SEG_NUM9 bound to: 8'b00010000 
+	Parameter DUAN_3 bound to: 4'b0111 
+	Parameter DUAN_2 bound to: 4'b1011 
+	Parameter DUAN_1 bound to: 4'b1101 
+	Parameter DUAN_0 bound to: 4'b1110 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:83]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:196]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:212]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:227]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:242]
+INFO: [Synth 8-256] done synthesizing module 'second_counter' (8#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:22]
 INFO: [Synth 8-638] synthesizing module 'async_receiver' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:74]
 	Parameter ClkFrequency bound to: 25000000 - type: integer 
 	Parameter Baud bound to: 115200 - type: integer 
@@ -34,9 +98,9 @@ INFO: [Synth 8-638] synthesizing module 'BaudTickGen' [C:/Users/Arv/puzzle/puzzl
 	Parameter AccWidth bound to: 16 - type: integer 
 	Parameter ShiftLimiter bound to: 5 - type: integer 
 	Parameter Inc bound to: 2416 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'BaudTickGen' (2#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:184]
-INFO: [Synth 8-256] done synthesizing module 'async_receiver' (3#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:74]
-WARNING: [Synth 8-350] instance 'rx_inst' of module 'async_receiver' requires 6 connections, but only 5 given [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:44]
+INFO: [Synth 8-256] done synthesizing module 'BaudTickGen' (9#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:184]
+INFO: [Synth 8-256] done synthesizing module 'async_receiver' (10#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:74]
+WARNING: [Synth 8-350] instance 'rx_inst' of module 'async_receiver' requires 6 connections, but only 5 given [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:95]
 INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v:3]
 	Parameter C_H_SYNC_PULSE bound to: 96 - type: integer 
 	Parameter C_H_BACK_PORCH bound to: 48 - type: integer 
@@ -48,7 +112,9 @@ INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/Arv/puzzle/puzzle.srcs/s
 	Parameter C_V_ACTIVE_TIME bound to: 480 - type: integer 
 	Parameter C_V_FRONT_PORCH bound to: 10 - type: integer 
 	Parameter C_V_FRAME_PERIOD bound to: 525 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'vga' (4#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v:3]
+INFO: [Synth 8-256] done synthesizing module 'vga' (11#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v:3]
+INFO: [Synth 8-638] synthesizing module 'anti_shake_single' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:23]
+INFO: [Synth 8-256] done synthesizing module 'anti_shake_single' (12#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:23]
 INFO: [Synth 8-638] synthesizing module 'pixel_ctrl' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v:3]
 	Parameter C_PIC_WIDTH bound to: 480 - type: integer 
 	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
@@ -59,26 +125,32 @@ INFO: [Synth 8-638] synthesizing module 'pixel_transformer' [C:/Users/Arv/puzzle
 	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
 	Parameter C_PIC_WIDTH_HALF bound to: 240 - type: integer 
 	Parameter C_PIC_HEIGHT_HALF bound to: 240 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'pixel_transformer' (5#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:3]
-INFO: [Synth 8-256] done synthesizing module 'pixel_ctrl' (6#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v:3]
+INFO: [Synth 8-256] done synthesizing module 'pixel_transformer' (13#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:3]
+INFO: [Synth 8-256] done synthesizing module 'pixel_ctrl' (14#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v:3]
 INFO: [Synth 8-638] synthesizing module 'game_control' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/game_control.v:1]
 INFO: [Synth 8-638] synthesizing module 'permutation' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:1]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:14]
-INFO: [Synth 8-256] done synthesizing module 'permutation' (7#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:1]
-INFO: [Synth 8-256] done synthesizing module 'game_control' (8#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/game_control.v:1]
+INFO: [Synth 8-256] done synthesizing module 'permutation' (15#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:1]
+INFO: [Synth 8-256] done synthesizing module 'game_control' (16#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/game_control.v:1]
 INFO: [Synth 8-638] synthesizing module 'img_mem_ctrl' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v:1]
 	Parameter C_PIC_WIDTH bound to: 480 - type: integer 
 	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
 	Parameter C_PIC_DEPTH bound to: 230400 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'img_mem' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'img_mem' (9#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'img_mem_ctrl' (10#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v:1]
+INFO: [Synth 8-638] synthesizing module 'img_mem' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'img_mem' (17#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'img_mem_ctrl' (18#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v:1]
 WARNING: [Synth 8-3848] Net O_uart_tx in module/entity top does not have driver. [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:7]
-INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:1]
+WARNING: [Synth 8-3848] Net O_seg_en_step in module/entity top does not have driver. [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:25]
+INFO: [Synth 8-256] done synthesizing module 'top' (19#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:1]
 WARNING: [Synth 8-3331] design img_mem_ctrl has unconnected port I_read_en
 WARNING: [Synth 8-3331] design top has unconnected port O_uart_tx
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[3]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[2]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[1]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[0]
+WARNING: [Synth 8-3331] design top has unconnected port I_unsolvable
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.168 ; gain = 153.305
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 395.340 ; gain = 153.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -88,19 +160,22 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.168 ; gain = 153.305
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 395.340 ; gain = 153.824
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
-Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
-Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
-Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
+Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
+Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
+Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
+Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
 Parsing XDC File [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc]
+WARNING: [Vivado 12-584] No ports matched 'I_btn_rand'. [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'I_btn_rand'. [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc:77]
 Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/dont_touch.xdc]
@@ -110,32 +185,42 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 752.605 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 761.172 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 752.605 ; gain = 510.742
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 752.605 ; gain = 510.742
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-4616-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk_25m. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for imc_inst/img_mem. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 752.605 ; gain = 510.742
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "O_hasSolution" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "clk_bps" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "cnt_second" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element frequency_count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:91]
+INFO: [Synth 8-5545] ROM "fsm" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cen" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "ms10" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:74]
 INFO: [Synth 8-802] inferred FSM for state register 'RxD_state_reg' in module 'async_receiver'
 INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "OversamplingCnt0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element GapCnt_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:169]
+INFO: [Synth 8-5546] ROM "t2" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:32]
 INFO: [Synth 8-5544] ROM "O_pos_a" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "O_pos_a" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -162,7 +247,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'O_pos_b_reg' [C:/Users/Arv/
 WARNING: [Synth 8-327] inferring latch for variable 'O_pos_c_reg' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:18]
 WARNING: [Synth 8-327] inferring latch for variable 'O_pos_d_reg' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:19]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 752.605 ; gain = 510.742
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 761.172 ; gain = 519.656
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -173,37 +258,58 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register melody_reg [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:82]
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     18 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     18 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 2     
 	   2 Input     10 Bit       Adders := 7     
 	   3 Input     10 Bit       Adders := 3     
 	   2 Input      6 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 7     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               18 Bit    Registers := 1     
+	             2001 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	               18 Bit    Registers := 2     
 	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
 	                6 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 11    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 3     
+	                1 Bit    Registers := 27    
 +---Muxes : 
-	   2 Input     18 Bit        Muxes := 1     
+	   2 Input    334 Bit        Muxes := 1     
+	   4 Input    334 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 16    
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input     14 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 2     
 	   2 Input     10 Bit        Muxes := 9     
+	  14 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 4     
 	   4 Input      8 Bit        Muxes := 1     
+	   7 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   4 Input      4 Bit        Muxes := 1     
 	  11 Input      4 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	   2 Input      2 Bit        Muxes := 13    
-	   2 Input      1 Bit        Muxes := 30    
-	  11 Input      1 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 52    
+	  11 Input      1 Bit        Muxes := 4     
+	  14 Input      1 Bit        Muxes := 1     
 	  25 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -211,7 +317,74 @@ Finished RTL Component Statistics
 ---------------------------------------------------------------------------------
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3538] Detected potentially large (wide) register melody_reg [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:82]
 Hierarchical RTL Component report 
+Module check 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module led_music_control 
+Detailed RTL Component Info : 
++---Registers : 
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   7 Input      5 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 6     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 2     
++---Registers : 
+	               14 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module flash_led 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+Module Music 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	             2001 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input    334 Bit        Muxes := 1     
+	   4 Input    334 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 14    
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     30 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module second_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     18 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 7     
++---Registers : 
+	               18 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     18 Bit        Muxes := 1     
+	  14 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 7     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 7     
+	  11 Input      1 Bit        Muxes := 3     
+	  14 Input      1 Bit        Muxes := 1     
 Module BaudTickGen 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -247,6 +420,12 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 2     
+Module anti_shake_single 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
 Module pixel_transformer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -295,21 +474,148 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'index_reg[31:0]' into 'index_reg[31:0]' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:71]
+WARNING: [Synth 8-6014] Unused sequential element index_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:71]
+WARNING: [Synth 8-6014] Unused sequential element frequency_count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v:91]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v:74]
 WARNING: [Synth 8-6014] Unused sequential element rx_inst/RxD_endofpacket_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:171]
+INFO: [Synth 8-5546] ROM "check_inst/O_hasSolution" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ml_top_inst/counter/cnt_second" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ml_top_inst/counter/clk_bps" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ass_left/t2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ass_right/t2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ass_up/t2" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "ass_down/t2" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element rx_inst/GapCnt_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:169]
+WARNING: [Synth 8-6014] Unused sequential element ass_left/count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
+WARNING: [Synth 8-6014] Unused sequential element ass_right/count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
+WARNING: [Synth 8-6014] Unused sequential element ass_up/count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
+WARNING: [Synth 8-6014] Unused sequential element ass_down/count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
 DSP Report: Generating DSP pctrl_inst/O_read_addr, operation Mode is: C+A*(B:0x1e0).
 DSP Report: operator pctrl_inst/O_read_addr is absorbed into DSP pctrl_inst/O_read_addr.
 DSP Report: operator pctrl_inst/O_read_addr0 is absorbed into DSP pctrl_inst/O_read_addr.
 WARNING: [Synth 8-3331] design top has unconnected port O_uart_tx
-INFO: [Synth 8-3886] merging instance 'vga_inst/O_blue_reg[0]' (FDC) to 'vga_inst/O_blue_reg[2]'
-INFO: [Synth 8-3886] merging instance 'vga_inst/O_blue_reg[1]' (FDC) to 'vga_inst/O_blue_reg[3]'
-INFO: [Synth 8-3886] merging instance 'vga_inst/O_green_reg[0]' (FDC) to 'vga_inst/O_green_reg[1]'
-INFO: [Synth 8-3886] merging instance 'vga_inst/O_red_reg[0]' (FDC) to 'vga_inst/O_red_reg[1]'
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[3]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[2]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[1]
+WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[0]
+WARNING: [Synth 8-3331] design top has unconnected port I_unsolvable
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[17]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[16]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[19]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[18]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[23]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[22]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[21]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[20]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[29]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[28]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[31]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[30]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[25]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[24]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[27]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[26]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[3]' (FDCE) to 'sc_inst/fsm_reg[1]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[1]' (FDCE) to 'sc_inst/fsm_reg[2]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[2]' (FDCE) to 'sc_inst/fsm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[7]' (FDCE) to 'sc_inst/fsm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[6]' (FDCE) to 'sc_inst/fsm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[5]' (FDCE) to 'sc_inst/fsm_reg[4]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[4]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[13]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[12]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[15]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[14]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[9]' (FDCE) to 'sc_inst/fsm_reg[8]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[8]' (FDCE) to 'sc_inst/fsm_reg[10]'
+INFO: [Synth 8-3886] merging instance 'sc_inst/fsm_reg[11]' (FDCE) to 'sc_inst/fsm_reg[10]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc_inst/fsm_reg[10] )
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/l/mode_reg[3]' (FDCE) to 'ml_top_inst/l/mode_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ml_top_inst/l/mode_reg[2] )
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[320]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[288]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[304]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[272]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[312]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[280]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[296]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[328]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[264]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[316]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[284]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[300]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[332]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[268]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[308]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[276]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[292]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[324]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[260]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[318]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[286]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[302]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[270]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[310]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[278]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[294]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[326]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[262]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[314]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[282]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[298]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[330]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[266]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[306]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[274]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[290]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[322]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[258]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[319]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[287]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[303]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[271]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[311]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[279]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[295]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[327]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[263]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[315]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[283]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[299]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[331]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[267]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[307]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[275]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[291]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[323]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[259]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[317]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[285]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[301]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[333]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[269]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[309]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[277]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[293]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[325]' (FDE) to 'ml_top_inst/m/melody_reg[16]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[261]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[313]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Synth 8-3886] merging instance 'ml_top_inst/m/melody_reg[281]' (FDE) to 'ml_top_inst/m/melody_reg[6]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ml_top_inst/m /\melody_reg[65] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\sc_inst/num_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ml_top_inst/m /\last_mode_reg[2] )
+WARNING: [Synth 8-3332] Sequential element (last_mode_reg[2]) is unused and will be removed from module Music.
+WARNING: [Synth 8-3332] Sequential element (sc_inst/fsm_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (sc_inst/count_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (sc_inst/num_reg[7]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/l/mode_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[2]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 752.605 ; gain = 510.742
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 761.172 ; gain = 519.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -319,10 +625,12 @@ ROM:
 +------------+---------------------------------+---------------+----------------+
 |Module Name | RTL Object                      | Depth x Width | Implemented As | 
 +------------+---------------------------------+---------------+----------------+
+|Music       | freq                            | 32x30         | LUT            | 
 |permutation | O_pos_a                         | 32x2          | LUT            | 
 |permutation | O_pos_b                         | 32x2          | LUT            | 
 |permutation | O_pos_c                         | 32x2          | LUT            | 
 |permutation | O_pos_d                         | 32x2          | LUT            | 
+|Music       | freq                            | 32x30         | LUT            | 
 |top         | gamectrl_inst/perm_inst/O_pos_a | 32x2          | LUT            | 
 |top         | gamectrl_inst/perm_inst/O_pos_b | 32x2          | LUT            | 
 |top         | gamectrl_inst/perm_inst/O_pos_c | 32x2          | LUT            | 
@@ -353,13 +661,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_25m/clk_out1' to pin 'clk_25m/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 786.840 ; gain = 544.977
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 804.773 ; gain = 563.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 813.059 ; gain = 571.195
+Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 839.488 ; gain = 597.973
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -370,8 +678,33 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[31]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[30]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[29]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[28]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[27]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[26]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[25]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[24]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[23]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[22]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[21]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[20]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[19]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[18]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[17]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[16]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[15]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[14]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[13]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[12]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[11]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[10]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[9]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[8]) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[7]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -391,11 +724,12 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop sc_inst/fsm_reg[0] is being inverted and renamed to sc_inst/fsm_reg[0]_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -408,7 +742,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -420,25 +754,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -458,58 +792,72 @@ Report Cell Usage:
 +------+--------+------+
 |1     |clk_25m |     1|
 |2     |img_mem |     1|
-|3     |CARRY4  |    21|
+|3     |CARRY4  |   106|
 |4     |DSP48E1 |     1|
-|5     |LUT1    |    15|
-|6     |LUT2    |    35|
-|7     |LUT3    |    27|
-|8     |LUT4    |    31|
-|9     |LUT5    |    50|
-|10    |LUT6    |    96|
-|11    |MUXF7   |     5|
-|12    |FDCE    |    58|
-|13    |FDPE    |     4|
-|14    |FDRE    |    41|
-|15    |LD      |     8|
-|16    |IBUF    |    13|
-|17    |OBUF    |    16|
-|18    |OBUFT   |     1|
+|5     |LUT1    |    27|
+|6     |LUT2    |   173|
+|7     |LUT3    |   231|
+|8     |LUT4    |   123|
+|9     |LUT5    |   140|
+|10    |LUT6    |   199|
+|11    |MUXF7   |    11|
+|12    |MUXF8   |     4|
+|13    |FDCE    |   237|
+|14    |FDPE    |     5|
+|15    |FDRE    |   207|
+|16    |FDSE    |     1|
+|17    |LD      |     8|
+|18    |IBUF    |    14|
+|19    |OBUF    |    45|
+|20    |OBUFT   |     5|
 +------+--------+------+
 
 Report Instance Areas: 
-+------+----------------+------------------+------+
-|      |Instance        |Module            |Cells |
-+------+----------------+------------------+------+
-|1     |top             |                  |   431|
-|2     |  gamectrl_inst |game_control      |    61|
-|3     |    perm_inst   |permutation       |    25|
-|4     |  imc_inst      |img_mem_ctrl      |    61|
-|5     |  pctrl_inst    |pixel_ctrl        |    16|
-|6     |    ptran_inst  |pixel_transformer |    15|
-|7     |  rx_inst       |async_receiver    |    74|
-|8     |    tickgen     |BaudTickGen       |    26|
-|9     |  vga_inst      |vga               |   188|
-+------+----------------+------------------+------+
++------+----------------+--------------------+------+
+|      |Instance        |Module              |Cells |
++------+----------------+--------------------+------+
+|1     |top             |                    |  1546|
+|2     |  ass_down      |anti_shake_single   |    58|
+|3     |  ass_left      |anti_shake_single_0 |    61|
+|4     |  ass_right     |anti_shake_single_1 |    61|
+|5     |  ass_up        |anti_shake_single_2 |    62|
+|6     |  check_inst    |check               |     2|
+|7     |  gamectrl_inst |game_control        |    66|
+|8     |    perm_inst   |permutation         |    17|
+|9     |  imc_inst      |img_mem_ctrl        |    61|
+|10    |  ml_top_inst   |music_led_top       |   671|
+|11    |    counter     |counter             |    73|
+|12    |    f           |flash_led           |    40|
+|13    |    l           |led_music_control   |    40|
+|14    |    m           |Music               |   517|
+|15    |  pctrl_inst    |pixel_ctrl          |    15|
+|16    |    ptran_inst  |pixel_transformer   |    14|
+|17    |  rx_inst       |async_receiver      |    74|
+|18    |    tickgen     |BaudTickGen         |    28|
+|19    |  sc_inst       |second_counter      |   177|
+|20    |  vga_inst      |vga                 |   173|
++------+----------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 11 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 822.152 ; gain = 222.852
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 822.152 ; gain = 580.289
+Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 851.555 ; gain = 244.207
+Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 8 instances were transformed.
   LD => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+193 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 822.152 ; gain = 591.793
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 851.555 ; gain = 621.570
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Arv/puzzle/puzzle.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 822.152 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Dec  8 22:49:35 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 851.555 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Dec 18 22:04:15 2021...
