@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Thu Dec  2 09:13:45 2021
 -- Host        : DESKTOP-VV69JL5 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top clk_25m -prefix
+--               clk_25m_ clk_25m_sim_netlist.vhdl
 -- Design      : clk_25m
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -20,8 +20,6 @@ entity clk_25m_clk_25m_clk_wiz is
     resetn : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clk_25m_clk_25m_clk_wiz : entity is "clk_25m_clk_wiz";
 end clk_25m_clk_25m_clk_wiz;
 
 architecture STRUCTURE of clk_25m_clk_25m_clk_wiz is

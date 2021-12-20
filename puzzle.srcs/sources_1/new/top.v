@@ -142,6 +142,7 @@ module top(
         .O_key(W_btn_down)
     );
 
+
     pixel_ctrl pctrl_inst(
         .I_pixel_x(W_pixel_x),
         .I_pixel_y(W_pixel_y),
@@ -153,7 +154,10 @@ module top(
         .I_pos_b(pos_b),
         .I_pos_c(pos_c),
         .I_pos_d(pos_d),
-        .O_read_addr(read_addr)
+        .O_read_addr(read_addr),
+        
+        .I_rst_n(I_rst_n),
+        .I_clk_25M(W_clk_25M)
     );
 
     game_control gamectrl_inst(
@@ -179,7 +183,6 @@ module top(
         .I_rst_n(I_rst_n),
         .I_write_en(W_rx_data_ready),
         .I_write_data(W_rx_data),
-        .I_read_en(W_pixel_valid),
         .O_pixel_data(W_pixel_data),
         .I_read_addr(read_addr)
     );

@@ -2,7 +2,6 @@ module img_mem_ctrl(
     input I_clk_25M,
     input I_rst_n,
     input I_write_en, //写入数据的使能信号
-    input I_read_en, //读取数据的使能信号
     input [7:0] I_write_data, //要写入的数据
     input [17:0] I_read_addr,
     output reg [7:0] O_pixel_data
@@ -25,8 +24,6 @@ module img_mem_ctrl(
     always @(posedge I_clk_25M, negedge I_rst_n) begin
         if(~I_rst_n) 
             O_pixel_data <= 0;
-        // else if(~I_read_en)
-        //     O_pixel_data <= 0;
         else
             O_pixel_data <= W_read_data;
     end
@@ -42,9 +39,4 @@ module img_mem_ctrl(
         .addrb(I_read_addr),
         .doutb(W_read_data)
     );
-    // blk_mem_gen_0 blk_mem_gen_0(
-    //     .clka(I_clk),
-    //     .addra(read_addr),
-    //     .douta(W_read_data)
-    // );
 endmodule

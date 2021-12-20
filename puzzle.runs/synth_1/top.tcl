@@ -16,7 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -49,13 +48,13 @@ read_verilog -library xil_defaultlib {
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v
 }
-read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem.xci
-set_property used_in_implementation false [get_files -all c:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem_ooc.xdc]
-
 read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m.xci
 set_property used_in_implementation false [get_files -all c:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m_ooc.xdc]
+
+read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem.xci
+set_property used_in_implementation false [get_files -all c:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

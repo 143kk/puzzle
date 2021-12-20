@@ -65,7 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a100tfgg484-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -75,8 +74,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
   add_files -quiet C:/Users/Arv/puzzle/puzzle.runs/synth_1/top.dcp
-  read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem.xci
   read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m.xci
+  read_ip -quiet C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem.xci
   read_xdc C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc
   link_design -top top -part xc7a100tfgg484-1
   close_msg_db -file init_design.pb

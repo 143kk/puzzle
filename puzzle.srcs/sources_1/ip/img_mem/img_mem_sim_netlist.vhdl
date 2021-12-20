@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu Dec  2 14:17:55 2021
+-- Date        : Sun Dec 19 23:13:46 2021
 -- Host        : DESKTOP-VV69JL5 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top img_mem -prefix
---               img_mem_ img_mem_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim
+--               C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/img_mem/img_mem_sim_netlist.vhdl
 -- Design      : img_mem
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -275,14 +275,13 @@ architecture STRUCTURE of \img_mem_blk_mem_gen_mux__parameterized0\ is
   signal \doutb[7]_INST_0_i_8_n_0\ : STD_LOGIC;
   signal \doutb[7]_INST_0_i_9_n_0\ : STD_LOGIC;
   signal sel_pipe : STD_LOGIC_VECTOR ( 6 downto 0 );
-  signal sel_pipe_d1 : STD_LOGIC_VECTOR ( 6 downto 0 );
 begin
 \doutb[0]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_1_n_0\,
       I1 => \doutb[0]_INST_0_i_2_n_0\,
       O => doutb(0),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[0]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -291,9 +290,9 @@ begin
         port map (
       I0 => \doutb[0]_INST_0_i_3_n_0\,
       I1 => \doutb[0]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[0]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[0]_INST_0_i_6_n_0\,
       O => \doutb[0]_INST_0_i_1_n_0\
     );
@@ -302,7 +301,7 @@ begin
       I0 => \doutb[0]_INST_0_i_23_n_0\,
       I1 => \doutb[0]_INST_0_i_24_n_0\,
       O => \doutb[0]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -311,9 +310,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(0),
       O => \doutb[0]_INST_0_i_11_n_0\
     );
@@ -324,9 +323,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(0),
       O => \doutb[0]_INST_0_i_12_n_0\
     );
@@ -337,9 +336,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(0),
       O => \doutb[0]_INST_0_i_13_n_0\
     );
@@ -350,9 +349,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(0),
       O => \doutb[0]_INST_0_i_14_n_0\
     );
@@ -363,9 +362,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(0),
       O => \doutb[0]_INST_0_i_15_n_0\
     );
@@ -376,9 +375,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(0),
       O => \doutb[0]_INST_0_i_16_n_0\
     );
@@ -389,9 +388,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(0),
       O => \doutb[0]_INST_0_i_17_n_0\
     );
@@ -402,9 +401,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(0),
       O => \doutb[0]_INST_0_i_18_n_0\
     );
@@ -415,9 +414,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(0),
       O => \doutb[0]_INST_0_i_19_n_0\
     );
@@ -428,9 +427,9 @@ begin
         port map (
       I0 => \doutb[0]_INST_0_i_7_n_0\,
       I1 => \doutb[0]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[0]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[0]_INST_0_i_10_n_0\,
       O => \doutb[0]_INST_0_i_2_n_0\
     );
@@ -441,9 +440,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(0),
       O => \doutb[0]_INST_0_i_20_n_0\
     );
@@ -454,9 +453,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(0),
       O => \doutb[0]_INST_0_i_21_n_0\
     );
@@ -467,9 +466,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(0),
       O => \doutb[0]_INST_0_i_22_n_0\
     );
@@ -480,9 +479,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(0),
       O => \doutb[0]_INST_0_i_23_n_0\
     );
@@ -493,9 +492,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(0),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(0),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(0),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(0),
       O => \doutb[0]_INST_0_i_24_n_0\
     );
@@ -504,39 +503,39 @@ begin
       I0 => \doutb[0]_INST_0_i_11_n_0\,
       I1 => \doutb[0]_INST_0_i_12_n_0\,
       O => \doutb[0]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_13_n_0\,
       I1 => \doutb[0]_INST_0_i_14_n_0\,
       O => \doutb[0]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_15_n_0\,
       I1 => \doutb[0]_INST_0_i_16_n_0\,
       O => \doutb[0]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_17_n_0\,
       I1 => \doutb[0]_INST_0_i_18_n_0\,
       O => \doutb[0]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(0),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[0]_INST_0_i_7_n_0\
     );
 \doutb[0]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -544,21 +543,21 @@ begin
       I0 => \doutb[0]_INST_0_i_19_n_0\,
       I1 => \doutb[0]_INST_0_i_20_n_0\,
       O => \doutb[0]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[0]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[0]_INST_0_i_21_n_0\,
       I1 => \doutb[0]_INST_0_i_22_n_0\,
       O => \doutb[0]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_1_n_0\,
       I1 => \doutb[1]_INST_0_i_2_n_0\,
       O => doutb(1),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[1]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -567,9 +566,9 @@ begin
         port map (
       I0 => \doutb[1]_INST_0_i_3_n_0\,
       I1 => \doutb[1]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[1]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[1]_INST_0_i_6_n_0\,
       O => \doutb[1]_INST_0_i_1_n_0\
     );
@@ -578,7 +577,7 @@ begin
       I0 => \doutb[1]_INST_0_i_23_n_0\,
       I1 => \doutb[1]_INST_0_i_24_n_0\,
       O => \doutb[1]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -587,9 +586,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(1),
       O => \doutb[1]_INST_0_i_11_n_0\
     );
@@ -600,9 +599,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(1),
       O => \doutb[1]_INST_0_i_12_n_0\
     );
@@ -613,9 +612,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(1),
       O => \doutb[1]_INST_0_i_13_n_0\
     );
@@ -626,9 +625,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(1),
       O => \doutb[1]_INST_0_i_14_n_0\
     );
@@ -639,9 +638,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(1),
       O => \doutb[1]_INST_0_i_15_n_0\
     );
@@ -652,9 +651,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(1),
       O => \doutb[1]_INST_0_i_16_n_0\
     );
@@ -665,9 +664,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(1),
       O => \doutb[1]_INST_0_i_17_n_0\
     );
@@ -678,9 +677,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(1),
       O => \doutb[1]_INST_0_i_18_n_0\
     );
@@ -691,9 +690,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(1),
       O => \doutb[1]_INST_0_i_19_n_0\
     );
@@ -704,9 +703,9 @@ begin
         port map (
       I0 => \doutb[1]_INST_0_i_7_n_0\,
       I1 => \doutb[1]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[1]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[1]_INST_0_i_10_n_0\,
       O => \doutb[1]_INST_0_i_2_n_0\
     );
@@ -717,9 +716,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(1),
       O => \doutb[1]_INST_0_i_20_n_0\
     );
@@ -730,9 +729,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(1),
       O => \doutb[1]_INST_0_i_21_n_0\
     );
@@ -743,9 +742,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(1),
       O => \doutb[1]_INST_0_i_22_n_0\
     );
@@ -756,9 +755,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(1),
       O => \doutb[1]_INST_0_i_23_n_0\
     );
@@ -769,9 +768,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(1),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(1),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(1),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(1),
       O => \doutb[1]_INST_0_i_24_n_0\
     );
@@ -780,39 +779,39 @@ begin
       I0 => \doutb[1]_INST_0_i_11_n_0\,
       I1 => \doutb[1]_INST_0_i_12_n_0\,
       O => \doutb[1]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_13_n_0\,
       I1 => \doutb[1]_INST_0_i_14_n_0\,
       O => \doutb[1]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_15_n_0\,
       I1 => \doutb[1]_INST_0_i_16_n_0\,
       O => \doutb[1]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_17_n_0\,
       I1 => \doutb[1]_INST_0_i_18_n_0\,
       O => \doutb[1]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(1),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[1]_INST_0_i_7_n_0\
     );
 \doutb[1]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -820,21 +819,21 @@ begin
       I0 => \doutb[1]_INST_0_i_19_n_0\,
       I1 => \doutb[1]_INST_0_i_20_n_0\,
       O => \doutb[1]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[1]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[1]_INST_0_i_21_n_0\,
       I1 => \doutb[1]_INST_0_i_22_n_0\,
       O => \doutb[1]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_1_n_0\,
       I1 => \doutb[2]_INST_0_i_2_n_0\,
       O => doutb(2),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[2]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -843,9 +842,9 @@ begin
         port map (
       I0 => \doutb[2]_INST_0_i_3_n_0\,
       I1 => \doutb[2]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[2]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[2]_INST_0_i_6_n_0\,
       O => \doutb[2]_INST_0_i_1_n_0\
     );
@@ -854,7 +853,7 @@ begin
       I0 => \doutb[2]_INST_0_i_23_n_0\,
       I1 => \doutb[2]_INST_0_i_24_n_0\,
       O => \doutb[2]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -863,9 +862,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(2),
       O => \doutb[2]_INST_0_i_11_n_0\
     );
@@ -876,9 +875,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(2),
       O => \doutb[2]_INST_0_i_12_n_0\
     );
@@ -889,9 +888,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(2),
       O => \doutb[2]_INST_0_i_13_n_0\
     );
@@ -902,9 +901,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(2),
       O => \doutb[2]_INST_0_i_14_n_0\
     );
@@ -915,9 +914,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(2),
       O => \doutb[2]_INST_0_i_15_n_0\
     );
@@ -928,9 +927,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(2),
       O => \doutb[2]_INST_0_i_16_n_0\
     );
@@ -941,9 +940,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(2),
       O => \doutb[2]_INST_0_i_17_n_0\
     );
@@ -954,9 +953,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(2),
       O => \doutb[2]_INST_0_i_18_n_0\
     );
@@ -967,9 +966,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(2),
       O => \doutb[2]_INST_0_i_19_n_0\
     );
@@ -980,9 +979,9 @@ begin
         port map (
       I0 => \doutb[2]_INST_0_i_7_n_0\,
       I1 => \doutb[2]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[2]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[2]_INST_0_i_10_n_0\,
       O => \doutb[2]_INST_0_i_2_n_0\
     );
@@ -993,9 +992,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(2),
       O => \doutb[2]_INST_0_i_20_n_0\
     );
@@ -1006,9 +1005,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(2),
       O => \doutb[2]_INST_0_i_21_n_0\
     );
@@ -1019,9 +1018,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(2),
       O => \doutb[2]_INST_0_i_22_n_0\
     );
@@ -1032,9 +1031,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(2),
       O => \doutb[2]_INST_0_i_23_n_0\
     );
@@ -1045,9 +1044,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(2),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(2),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(2),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(2),
       O => \doutb[2]_INST_0_i_24_n_0\
     );
@@ -1056,39 +1055,39 @@ begin
       I0 => \doutb[2]_INST_0_i_11_n_0\,
       I1 => \doutb[2]_INST_0_i_12_n_0\,
       O => \doutb[2]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_13_n_0\,
       I1 => \doutb[2]_INST_0_i_14_n_0\,
       O => \doutb[2]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_15_n_0\,
       I1 => \doutb[2]_INST_0_i_16_n_0\,
       O => \doutb[2]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_17_n_0\,
       I1 => \doutb[2]_INST_0_i_18_n_0\,
       O => \doutb[2]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(2),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[2]_INST_0_i_7_n_0\
     );
 \doutb[2]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -1096,21 +1095,21 @@ begin
       I0 => \doutb[2]_INST_0_i_19_n_0\,
       I1 => \doutb[2]_INST_0_i_20_n_0\,
       O => \doutb[2]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[2]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[2]_INST_0_i_21_n_0\,
       I1 => \doutb[2]_INST_0_i_22_n_0\,
       O => \doutb[2]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_1_n_0\,
       I1 => \doutb[3]_INST_0_i_2_n_0\,
       O => doutb(3),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[3]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1119,9 +1118,9 @@ begin
         port map (
       I0 => \doutb[3]_INST_0_i_3_n_0\,
       I1 => \doutb[3]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[3]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[3]_INST_0_i_6_n_0\,
       O => \doutb[3]_INST_0_i_1_n_0\
     );
@@ -1130,7 +1129,7 @@ begin
       I0 => \doutb[3]_INST_0_i_23_n_0\,
       I1 => \doutb[3]_INST_0_i_24_n_0\,
       O => \doutb[3]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -1139,9 +1138,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(3),
       O => \doutb[3]_INST_0_i_11_n_0\
     );
@@ -1152,9 +1151,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(3),
       O => \doutb[3]_INST_0_i_12_n_0\
     );
@@ -1165,9 +1164,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(3),
       O => \doutb[3]_INST_0_i_13_n_0\
     );
@@ -1178,9 +1177,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(3),
       O => \doutb[3]_INST_0_i_14_n_0\
     );
@@ -1191,9 +1190,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(3),
       O => \doutb[3]_INST_0_i_15_n_0\
     );
@@ -1204,9 +1203,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(3),
       O => \doutb[3]_INST_0_i_16_n_0\
     );
@@ -1217,9 +1216,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(3),
       O => \doutb[3]_INST_0_i_17_n_0\
     );
@@ -1230,9 +1229,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(3),
       O => \doutb[3]_INST_0_i_18_n_0\
     );
@@ -1243,9 +1242,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(3),
       O => \doutb[3]_INST_0_i_19_n_0\
     );
@@ -1256,9 +1255,9 @@ begin
         port map (
       I0 => \doutb[3]_INST_0_i_7_n_0\,
       I1 => \doutb[3]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[3]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[3]_INST_0_i_10_n_0\,
       O => \doutb[3]_INST_0_i_2_n_0\
     );
@@ -1269,9 +1268,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(3),
       O => \doutb[3]_INST_0_i_20_n_0\
     );
@@ -1282,9 +1281,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(3),
       O => \doutb[3]_INST_0_i_21_n_0\
     );
@@ -1295,9 +1294,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(3),
       O => \doutb[3]_INST_0_i_22_n_0\
     );
@@ -1308,9 +1307,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(3),
       O => \doutb[3]_INST_0_i_23_n_0\
     );
@@ -1321,9 +1320,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(3),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(3),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(3),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(3),
       O => \doutb[3]_INST_0_i_24_n_0\
     );
@@ -1332,39 +1331,39 @@ begin
       I0 => \doutb[3]_INST_0_i_11_n_0\,
       I1 => \doutb[3]_INST_0_i_12_n_0\,
       O => \doutb[3]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_13_n_0\,
       I1 => \doutb[3]_INST_0_i_14_n_0\,
       O => \doutb[3]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_15_n_0\,
       I1 => \doutb[3]_INST_0_i_16_n_0\,
       O => \doutb[3]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_17_n_0\,
       I1 => \doutb[3]_INST_0_i_18_n_0\,
       O => \doutb[3]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(3),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[3]_INST_0_i_7_n_0\
     );
 \doutb[3]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -1372,21 +1371,21 @@ begin
       I0 => \doutb[3]_INST_0_i_19_n_0\,
       I1 => \doutb[3]_INST_0_i_20_n_0\,
       O => \doutb[3]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[3]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[3]_INST_0_i_21_n_0\,
       I1 => \doutb[3]_INST_0_i_22_n_0\,
       O => \doutb[3]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_1_n_0\,
       I1 => \doutb[4]_INST_0_i_2_n_0\,
       O => doutb(4),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[4]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1395,9 +1394,9 @@ begin
         port map (
       I0 => \doutb[4]_INST_0_i_3_n_0\,
       I1 => \doutb[4]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[4]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[4]_INST_0_i_6_n_0\,
       O => \doutb[4]_INST_0_i_1_n_0\
     );
@@ -1406,7 +1405,7 @@ begin
       I0 => \doutb[4]_INST_0_i_23_n_0\,
       I1 => \doutb[4]_INST_0_i_24_n_0\,
       O => \doutb[4]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -1415,9 +1414,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(4),
       O => \doutb[4]_INST_0_i_11_n_0\
     );
@@ -1428,9 +1427,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(4),
       O => \doutb[4]_INST_0_i_12_n_0\
     );
@@ -1441,9 +1440,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(4),
       O => \doutb[4]_INST_0_i_13_n_0\
     );
@@ -1454,9 +1453,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(4),
       O => \doutb[4]_INST_0_i_14_n_0\
     );
@@ -1467,9 +1466,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(4),
       O => \doutb[4]_INST_0_i_15_n_0\
     );
@@ -1480,9 +1479,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(4),
       O => \doutb[4]_INST_0_i_16_n_0\
     );
@@ -1493,9 +1492,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(4),
       O => \doutb[4]_INST_0_i_17_n_0\
     );
@@ -1506,9 +1505,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(4),
       O => \doutb[4]_INST_0_i_18_n_0\
     );
@@ -1519,9 +1518,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(4),
       O => \doutb[4]_INST_0_i_19_n_0\
     );
@@ -1532,9 +1531,9 @@ begin
         port map (
       I0 => \doutb[4]_INST_0_i_7_n_0\,
       I1 => \doutb[4]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[4]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[4]_INST_0_i_10_n_0\,
       O => \doutb[4]_INST_0_i_2_n_0\
     );
@@ -1545,9 +1544,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(4),
       O => \doutb[4]_INST_0_i_20_n_0\
     );
@@ -1558,9 +1557,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(4),
       O => \doutb[4]_INST_0_i_21_n_0\
     );
@@ -1571,9 +1570,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(4),
       O => \doutb[4]_INST_0_i_22_n_0\
     );
@@ -1584,9 +1583,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(4),
       O => \doutb[4]_INST_0_i_23_n_0\
     );
@@ -1597,9 +1596,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(4),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(4),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(4),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(4),
       O => \doutb[4]_INST_0_i_24_n_0\
     );
@@ -1608,39 +1607,39 @@ begin
       I0 => \doutb[4]_INST_0_i_11_n_0\,
       I1 => \doutb[4]_INST_0_i_12_n_0\,
       O => \doutb[4]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_13_n_0\,
       I1 => \doutb[4]_INST_0_i_14_n_0\,
       O => \doutb[4]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_15_n_0\,
       I1 => \doutb[4]_INST_0_i_16_n_0\,
       O => \doutb[4]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_17_n_0\,
       I1 => \doutb[4]_INST_0_i_18_n_0\,
       O => \doutb[4]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(4),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[4]_INST_0_i_7_n_0\
     );
 \doutb[4]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -1648,21 +1647,21 @@ begin
       I0 => \doutb[4]_INST_0_i_19_n_0\,
       I1 => \doutb[4]_INST_0_i_20_n_0\,
       O => \doutb[4]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[4]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[4]_INST_0_i_21_n_0\,
       I1 => \doutb[4]_INST_0_i_22_n_0\,
       O => \doutb[4]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_1_n_0\,
       I1 => \doutb[5]_INST_0_i_2_n_0\,
       O => doutb(5),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[5]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1671,9 +1670,9 @@ begin
         port map (
       I0 => \doutb[5]_INST_0_i_3_n_0\,
       I1 => \doutb[5]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[5]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[5]_INST_0_i_6_n_0\,
       O => \doutb[5]_INST_0_i_1_n_0\
     );
@@ -1682,7 +1681,7 @@ begin
       I0 => \doutb[5]_INST_0_i_23_n_0\,
       I1 => \doutb[5]_INST_0_i_24_n_0\,
       O => \doutb[5]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -1691,9 +1690,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(5),
       O => \doutb[5]_INST_0_i_11_n_0\
     );
@@ -1704,9 +1703,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(5),
       O => \doutb[5]_INST_0_i_12_n_0\
     );
@@ -1717,9 +1716,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(5),
       O => \doutb[5]_INST_0_i_13_n_0\
     );
@@ -1730,9 +1729,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(5),
       O => \doutb[5]_INST_0_i_14_n_0\
     );
@@ -1743,9 +1742,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(5),
       O => \doutb[5]_INST_0_i_15_n_0\
     );
@@ -1756,9 +1755,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(5),
       O => \doutb[5]_INST_0_i_16_n_0\
     );
@@ -1769,9 +1768,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(5),
       O => \doutb[5]_INST_0_i_17_n_0\
     );
@@ -1782,9 +1781,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(5),
       O => \doutb[5]_INST_0_i_18_n_0\
     );
@@ -1795,9 +1794,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(5),
       O => \doutb[5]_INST_0_i_19_n_0\
     );
@@ -1808,9 +1807,9 @@ begin
         port map (
       I0 => \doutb[5]_INST_0_i_7_n_0\,
       I1 => \doutb[5]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[5]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[5]_INST_0_i_10_n_0\,
       O => \doutb[5]_INST_0_i_2_n_0\
     );
@@ -1821,9 +1820,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(5),
       O => \doutb[5]_INST_0_i_20_n_0\
     );
@@ -1834,9 +1833,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(5),
       O => \doutb[5]_INST_0_i_21_n_0\
     );
@@ -1847,9 +1846,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(5),
       O => \doutb[5]_INST_0_i_22_n_0\
     );
@@ -1860,9 +1859,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(5),
       O => \doutb[5]_INST_0_i_23_n_0\
     );
@@ -1873,9 +1872,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(5),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(5),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(5),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(5),
       O => \doutb[5]_INST_0_i_24_n_0\
     );
@@ -1884,39 +1883,39 @@ begin
       I0 => \doutb[5]_INST_0_i_11_n_0\,
       I1 => \doutb[5]_INST_0_i_12_n_0\,
       O => \doutb[5]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_13_n_0\,
       I1 => \doutb[5]_INST_0_i_14_n_0\,
       O => \doutb[5]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_15_n_0\,
       I1 => \doutb[5]_INST_0_i_16_n_0\,
       O => \doutb[5]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_17_n_0\,
       I1 => \doutb[5]_INST_0_i_18_n_0\,
       O => \doutb[5]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(5),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[5]_INST_0_i_7_n_0\
     );
 \doutb[5]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -1924,21 +1923,21 @@ begin
       I0 => \doutb[5]_INST_0_i_19_n_0\,
       I1 => \doutb[5]_INST_0_i_20_n_0\,
       O => \doutb[5]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[5]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[5]_INST_0_i_21_n_0\,
       I1 => \doutb[5]_INST_0_i_22_n_0\,
       O => \doutb[5]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_1_n_0\,
       I1 => \doutb[6]_INST_0_i_2_n_0\,
       O => doutb(6),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[6]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1947,9 +1946,9 @@ begin
         port map (
       I0 => \doutb[6]_INST_0_i_3_n_0\,
       I1 => \doutb[6]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[6]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[6]_INST_0_i_6_n_0\,
       O => \doutb[6]_INST_0_i_1_n_0\
     );
@@ -1958,7 +1957,7 @@ begin
       I0 => \doutb[6]_INST_0_i_23_n_0\,
       I1 => \doutb[6]_INST_0_i_24_n_0\,
       O => \doutb[6]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -1967,9 +1966,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(6),
       O => \doutb[6]_INST_0_i_11_n_0\
     );
@@ -1980,9 +1979,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(6),
       O => \doutb[6]_INST_0_i_12_n_0\
     );
@@ -1993,9 +1992,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(6),
       O => \doutb[6]_INST_0_i_13_n_0\
     );
@@ -2006,9 +2005,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(6),
       O => \doutb[6]_INST_0_i_14_n_0\
     );
@@ -2019,9 +2018,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(6),
       O => \doutb[6]_INST_0_i_15_n_0\
     );
@@ -2032,9 +2031,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(6),
       O => \doutb[6]_INST_0_i_16_n_0\
     );
@@ -2045,9 +2044,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(6),
       O => \doutb[6]_INST_0_i_17_n_0\
     );
@@ -2058,9 +2057,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(6),
       O => \doutb[6]_INST_0_i_18_n_0\
     );
@@ -2071,9 +2070,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(6),
       O => \doutb[6]_INST_0_i_19_n_0\
     );
@@ -2084,9 +2083,9 @@ begin
         port map (
       I0 => \doutb[6]_INST_0_i_7_n_0\,
       I1 => \doutb[6]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[6]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[6]_INST_0_i_10_n_0\,
       O => \doutb[6]_INST_0_i_2_n_0\
     );
@@ -2097,9 +2096,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(6),
       O => \doutb[6]_INST_0_i_20_n_0\
     );
@@ -2110,9 +2109,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(6),
       O => \doutb[6]_INST_0_i_21_n_0\
     );
@@ -2123,9 +2122,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(6),
       O => \doutb[6]_INST_0_i_22_n_0\
     );
@@ -2136,9 +2135,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(6),
       O => \doutb[6]_INST_0_i_23_n_0\
     );
@@ -2149,9 +2148,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(6),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(6),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(6),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(6),
       O => \doutb[6]_INST_0_i_24_n_0\
     );
@@ -2160,39 +2159,39 @@ begin
       I0 => \doutb[6]_INST_0_i_11_n_0\,
       I1 => \doutb[6]_INST_0_i_12_n_0\,
       O => \doutb[6]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_13_n_0\,
       I1 => \doutb[6]_INST_0_i_14_n_0\,
       O => \doutb[6]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_15_n_0\,
       I1 => \doutb[6]_INST_0_i_16_n_0\,
       O => \doutb[6]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_17_n_0\,
       I1 => \doutb[6]_INST_0_i_18_n_0\,
       O => \doutb[6]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(6),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[6]_INST_0_i_7_n_0\
     );
 \doutb[6]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -2200,21 +2199,21 @@ begin
       I0 => \doutb[6]_INST_0_i_19_n_0\,
       I1 => \doutb[6]_INST_0_i_20_n_0\,
       O => \doutb[6]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[6]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[6]_INST_0_i_21_n_0\,
       I1 => \doutb[6]_INST_0_i_22_n_0\,
       O => \doutb[6]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_1_n_0\,
       I1 => \doutb[7]_INST_0_i_2_n_0\,
       O => doutb(7),
-      S => sel_pipe_d1(6)
+      S => sel_pipe(6)
     );
 \doutb[7]_INST_0_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2223,9 +2222,9 @@ begin
         port map (
       I0 => \doutb[7]_INST_0_i_3_n_0\,
       I1 => \doutb[7]_INST_0_i_4_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[7]_INST_0_i_5_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[7]_INST_0_i_6_n_0\,
       O => \doutb[7]_INST_0_i_1_n_0\
     );
@@ -2234,7 +2233,7 @@ begin
       I0 => \doutb[7]_INST_0_i_23_n_0\,
       I1 => \doutb[7]_INST_0_i_24_n_0\,
       O => \doutb[7]_INST_0_i_10_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_11\: unisim.vcomponents.LUT6
     generic map(
@@ -2243,9 +2242,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_27\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_28\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_29\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_30\(7),
       O => \doutb[7]_INST_0_i_11_n_0\
     );
@@ -2256,9 +2255,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_23\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_24\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_25\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_26\(7),
       O => \doutb[7]_INST_0_i_12_n_0\
     );
@@ -2269,9 +2268,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_35\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_36\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_37\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_38\(7),
       O => \doutb[7]_INST_0_i_13_n_0\
     );
@@ -2282,9 +2281,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_31\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_32\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_33\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_34\(7),
       O => \doutb[7]_INST_0_i_14_n_0\
     );
@@ -2295,9 +2294,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_43\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_44\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_45\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_46\(7),
       O => \doutb[7]_INST_0_i_15_n_0\
     );
@@ -2308,9 +2307,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_39\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_40\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_41\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_42\(7),
       O => \doutb[7]_INST_0_i_16_n_0\
     );
@@ -2321,9 +2320,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_51\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_52\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_53\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_54\(7),
       O => \doutb[7]_INST_0_i_17_n_0\
     );
@@ -2334,9 +2333,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_47\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_48\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_49\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_50\(7),
       O => \doutb[7]_INST_0_i_18_n_0\
     );
@@ -2347,9 +2346,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_3\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_4\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_5\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_6\(7),
       O => \doutb[7]_INST_0_i_19_n_0\
     );
@@ -2360,9 +2359,9 @@ begin
         port map (
       I0 => \doutb[7]_INST_0_i_7_n_0\,
       I1 => \doutb[7]_INST_0_i_8_n_0\,
-      I2 => sel_pipe_d1(5),
+      I2 => sel_pipe(5),
       I3 => \doutb[7]_INST_0_i_9_n_0\,
-      I4 => sel_pipe_d1(4),
+      I4 => sel_pipe(4),
       I5 => \doutb[7]_INST_0_i_10_n_0\,
       O => \doutb[7]_INST_0_i_2_n_0\
     );
@@ -2373,9 +2372,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_1\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_2\(7),
       O => \doutb[7]_INST_0_i_20_n_0\
     );
@@ -2386,9 +2385,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_11\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_12\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_13\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_14\(7),
       O => \doutb[7]_INST_0_i_21_n_0\
     );
@@ -2399,9 +2398,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_7\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_8\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_9\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_10\(7),
       O => \doutb[7]_INST_0_i_22_n_0\
     );
@@ -2412,9 +2411,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_19\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_20\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_21\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_22\(7),
       O => \doutb[7]_INST_0_i_23_n_0\
     );
@@ -2425,9 +2424,9 @@ begin
         port map (
       I0 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_15\(7),
       I1 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_16\(7),
-      I2 => sel_pipe_d1(2),
+      I2 => sel_pipe(2),
       I3 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_17\(7),
-      I4 => sel_pipe_d1(1),
+      I4 => sel_pipe(1),
       I5 => \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_18\(7),
       O => \doutb[7]_INST_0_i_24_n_0\
     );
@@ -2436,39 +2435,39 @@ begin
       I0 => \doutb[7]_INST_0_i_11_n_0\,
       I1 => \doutb[7]_INST_0_i_12_n_0\,
       O => \doutb[7]_INST_0_i_3_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_4\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_13_n_0\,
       I1 => \doutb[7]_INST_0_i_14_n_0\,
       O => \doutb[7]_INST_0_i_4_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_5\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_15_n_0\,
       I1 => \doutb[7]_INST_0_i_16_n_0\,
       O => \doutb[7]_INST_0_i_5_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_6\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_17_n_0\,
       I1 => \doutb[7]_INST_0_i_18_n_0\,
       O => \doutb[7]_INST_0_i_6_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_7\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00000010"
     )
         port map (
-      I0 => sel_pipe_d1(2),
-      I1 => sel_pipe_d1(0),
+      I0 => sel_pipe(2),
+      I1 => sel_pipe(0),
       I2 => DOBDO(7),
-      I3 => sel_pipe_d1(1),
-      I4 => sel_pipe_d1(3),
+      I3 => sel_pipe(1),
+      I4 => sel_pipe(3),
       O => \doutb[7]_INST_0_i_7_n_0\
     );
 \doutb[7]_INST_0_i_8\: unisim.vcomponents.MUXF7
@@ -2476,91 +2475,14 @@ begin
       I0 => \doutb[7]_INST_0_i_19_n_0\,
       I1 => \doutb[7]_INST_0_i_20_n_0\,
       O => \doutb[7]_INST_0_i_8_n_0\,
-      S => sel_pipe_d1(3)
+      S => sel_pipe(3)
     );
 \doutb[7]_INST_0_i_9\: unisim.vcomponents.MUXF7
      port map (
       I0 => \doutb[7]_INST_0_i_21_n_0\,
       I1 => \doutb[7]_INST_0_i_22_n_0\,
       O => \doutb[7]_INST_0_i_9_n_0\,
-      S => sel_pipe_d1(3)
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(0),
-      Q => sel_pipe_d1(0),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(1),
-      Q => sel_pipe_d1(1),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(2),
-      Q => sel_pipe_d1(2),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(3),
-      Q => sel_pipe_d1(3),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(4),
-      Q => sel_pipe_d1(4),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(5),
-      Q => sel_pipe_d1(5),
-      R => '0'
-    );
-\no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[6]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => clkb,
-      CE => '1',
-      D => sel_pipe(6),
-      Q => sel_pipe_d1(6),
-      R => '0'
+      S => sel_pipe(3)
     );
 \no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]\: unisim.vcomponents.FDRE
     generic map(
@@ -2656,6 +2578,8 @@ entity img_mem_blk_mem_gen_prim_wrapper_init is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end img_mem_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of img_mem_blk_mem_gen_prim_wrapper_init is
@@ -2679,8 +2603,8 @@ begin
   \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ <= \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -2887,7 +2811,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -2975,8 +2899,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3183,7 +3107,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3261,8 +3185,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3469,7 +3393,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3547,8 +3471,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -3755,7 +3679,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -3833,8 +3757,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4041,7 +3965,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4119,8 +4043,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4327,7 +4251,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4405,8 +4329,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4613,7 +4537,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4691,8 +4615,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -4899,7 +4823,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -4977,8 +4901,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5185,7 +5109,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5263,8 +5187,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5471,7 +5395,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5549,8 +5473,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -5757,7 +5681,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -5835,8 +5759,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6043,7 +5967,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6121,8 +6045,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6329,7 +6253,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6407,8 +6331,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6615,7 +6539,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6693,8 +6617,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -6901,7 +6825,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -6979,8 +6903,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7187,7 +7111,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7265,8 +7189,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7473,7 +7397,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7551,8 +7475,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -7759,7 +7683,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -7837,8 +7761,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8045,7 +7969,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8123,8 +8047,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8331,7 +8255,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8409,8 +8333,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8617,7 +8541,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8695,8 +8619,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -8903,7 +8827,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -8981,8 +8905,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -9189,7 +9113,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9268,8 +9192,8 @@ begin
   \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ <= \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -9476,7 +9400,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9565,8 +9489,8 @@ begin
   \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_0\ <= \^device_7series.no_bmm_info.sdp.simple_prim36.ram_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -9773,7 +9697,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -9861,8 +9785,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -10069,7 +9993,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10147,8 +10071,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -10355,7 +10279,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10433,8 +10357,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -10641,7 +10565,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -10719,8 +10643,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -10927,7 +10851,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11005,8 +10929,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -11213,7 +11137,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11291,8 +11215,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -11499,7 +11423,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11577,8 +11501,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -11785,7 +11709,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -11863,8 +11787,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -12071,7 +11995,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12149,8 +12073,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -12357,7 +12281,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12435,8 +12359,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -12643,7 +12567,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -12721,8 +12645,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -12929,7 +12853,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13007,8 +12931,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -13215,7 +13139,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13293,8 +13217,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -13501,7 +13425,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13579,8 +13503,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -13787,7 +13711,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -13865,8 +13789,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -14073,7 +13997,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -14151,8 +14075,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -14359,7 +14283,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -14437,8 +14361,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -14645,7 +14569,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -14723,8 +14647,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -14931,7 +14855,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -15009,8 +14933,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -15217,7 +15141,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -15295,8 +15219,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -15503,7 +15427,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -15581,8 +15505,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -15789,7 +15713,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -15867,8 +15791,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -16075,7 +15999,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -16153,8 +16077,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -16361,7 +16285,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -16439,8 +16363,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -16647,7 +16571,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -16725,8 +16649,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -16933,7 +16857,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -17011,8 +16935,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -17219,7 +17143,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -17297,8 +17221,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -17505,7 +17429,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -17579,8 +17503,8 @@ begin
   \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_0\ <= \^device_7series.no_bmm_info.sdp.simple_prim18.ram_0\;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram\: unisim.vcomponents.RAMB18E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_01 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INITP_02 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -17700,7 +17624,7 @@ begin
       ENARDEN => ena_array(112),
       ENBWREN => enb_array(112),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -17795,8 +17719,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -18003,7 +17927,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -18081,8 +18005,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -18289,7 +18213,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -18367,8 +18291,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -18575,7 +18499,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -18653,8 +18577,8 @@ begin
   addra_14_sn_1 <= addra_14_sp_1;
 \DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram\: unisim.vcomponents.RAMB36E1
     generic map(
-      DOA_REG => 1,
-      DOB_REG => 1,
+      DOA_REG => 0,
+      DOB_REG => 0,
       EN_ECC_READ => false,
       EN_ECC_WRITE => false,
       INITP_00 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -18861,7 +18785,7 @@ begin
       INJECTSBITERR => '0',
       RDADDRECC(8 downto 0) => \NLW_DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_RDADDRECC_UNCONNECTED\(8 downto 0),
       REGCEAREGCE => '0',
-      REGCEB => '1',
+      REGCEB => '0',
       RSTRAMARSTRAM => '0',
       RSTRAMB => '0',
       RSTREGARSTREG => '0',
@@ -18915,6 +18839,8 @@ entity img_mem_blk_mem_gen_prim_width is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end img_mem_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of img_mem_blk_mem_gen_prim_width is
@@ -20907,6 +20833,8 @@ entity img_mem_blk_mem_gen_generic_cstr is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end img_mem_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of img_mem_blk_mem_gen_generic_cstr is
@@ -22911,6 +22839,8 @@ entity img_mem_blk_mem_gen_top is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end img_mem_blk_mem_gen_top;
 
 architecture STRUCTURE of img_mem_blk_mem_gen_top is
@@ -22942,6 +22872,8 @@ entity img_mem_blk_mem_gen_v8_4_1_synth is
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     ena : in STD_LOGIC
   );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end img_mem_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of img_mem_blk_mem_gen_v8_4_1_synth is
@@ -23089,7 +23021,7 @@ entity img_mem_blk_mem_gen_v8_4_1 is
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of img_mem_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of img_mem_blk_mem_gen_v8_4_1 : entity is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of img_mem_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of img_mem_blk_mem_gen_v8_4_1 : entity is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;
@@ -23174,6 +23106,8 @@ entity img_mem_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of img_mem_blk_mem_gen_v8_4_1 : entity is 8;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of img_mem_blk_mem_gen_v8_4_1 : entity is "artix7";
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of img_mem_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of img_mem_blk_mem_gen_v8_4_1 : entity is "yes";
 end img_mem_blk_mem_gen_v8_4_1;
@@ -23380,7 +23314,7 @@ architecture STRUCTURE of img_mem is
   attribute C_HAS_MEM_OUTPUT_REGS_A : integer;
   attribute C_HAS_MEM_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MEM_OUTPUT_REGS_B : integer;
-  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 1;
+  attribute C_HAS_MEM_OUTPUT_REGS_B of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_A : integer;
   attribute C_HAS_MUX_OUTPUT_REGS_A of U0 : label is 0;
   attribute C_HAS_MUX_OUTPUT_REGS_B : integer;

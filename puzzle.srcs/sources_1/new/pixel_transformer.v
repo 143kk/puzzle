@@ -13,10 +13,10 @@ module pixel_transformer(
     output [9:0] O_pixel_x,
     output [9:0] O_pixel_y
 );
-parameter C_PIC_WIDTH = 480;
-parameter C_PIC_HEIGHT = 480;
-parameter C_PIC_WIDTH_HALF = C_PIC_WIDTH / 2;
-parameter C_PIC_HEIGHT_HALF = C_PIC_HEIGHT / 2;
+parameter C_PIC_WIDTH = 10'd480;
+parameter C_PIC_HEIGHT = 10'd480;
+parameter C_PIC_WIDTH_HALF = 10'd240;
+parameter C_PIC_HEIGHT_HALF = 10'd240;
 
 
 assign O_pixel_x = ~I_EN ? 0 : (
@@ -59,24 +59,4 @@ assign O_pixel_y = ~I_EN ? 0 : (
     )
 );
 
-// assign O_read_addr = ~I_EN ? 0 : (
-//     (I_pixel_x < C_PIC_WIDTH_HALF) ? (
-//         (I_pixel_y < C_PIC_HEIGHT_HALF) ? (
-//             // pos a
-//             (I_pixel_y + (I_pos_a[1] ? C_PIC_HEIGHT_HALF : 0)) * C_PIC_WIDTH + I_pixel_x + (I_pos_a[0] ? C_PIC_WIDTH_HALF : 0)
-//         ) : (
-//             // pos c
-//             (I_pixel_y - (I_pos_c[1] ? 0 : C_PIC_HEIGHT_HALF)) * C_PIC_WIDTH + I_pixel_x + (I_pos_c[0] ? C_PIC_WIDTH_HALF : 0)
-//             //(C_PIC_WIDTH * I_pixel_y) + I_pixel_x
-//         )
-//     ):(
-//         (I_pixel_y < C_PIC_HEIGHT_HALF) ? (
-//             // pos b
-//             (I_pixel_y + (I_pos_b[1] ? C_PIC_HEIGHT_HALF : 0)) * C_PIC_WIDTH + I_pixel_x - (I_pos_b[0] ? 0 : C_PIC_WIDTH_HALF)
-//         ) : (
-//             // pos d
-//             (I_pixel_y - (I_pos_d[1] ? 0 : C_PIC_HEIGHT_HALF)) * C_PIC_WIDTH + I_pixel_x - (I_pos_d[0] ? 0 : C_PIC_WIDTH_HALF)
-//         )
-//     )
-// );
 endmodule

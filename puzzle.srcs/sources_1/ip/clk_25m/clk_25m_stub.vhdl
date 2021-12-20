@@ -3,7 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Thu Dec  2 09:13:45 2021
 -- Host        : DESKTOP-VV69JL5 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub C:/Users/Arv/puzzle/puzzle.srcs/sources_1/ip/clk_25m/clk_25m_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top clk_25m -prefix
+--               clk_25m_ clk_25m_stub.vhdl
 -- Design      : clk_25m
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tfgg484-1

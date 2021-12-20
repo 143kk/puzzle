@@ -15,17 +15,17 @@ module vga(
     output O_pixel_valid
     
 );
-    parameter   C_H_SYNC_PULSE      =   96  , 
-                C_H_BACK_PORCH      =   48  ,
-                C_H_ACTIVE_TIME     =   640 ,
-                C_H_FRONT_PORCH     =   16  ,
-                C_H_LINE_PERIOD     =   800 ;
+    parameter   C_H_SYNC_PULSE      =   10'd96  , 
+                C_H_BACK_PORCH      =   10'd48  ,
+                C_H_ACTIVE_TIME     =   10'd640 ,
+                C_H_FRONT_PORCH     =   10'd16  ,
+                C_H_LINE_PERIOD     =   10'd800 ;
                 
-    parameter   C_V_SYNC_PULSE      =   2   , 
-                C_V_BACK_PORCH      =   33  ,
-                C_V_ACTIVE_TIME     =   480 ,
-                C_V_FRONT_PORCH     =   10  ,
-                C_V_FRAME_PERIOD    =   525 ;
+    parameter   C_V_SYNC_PULSE      =   10'd2   , 
+                C_V_BACK_PORCH      =   10'd33  ,
+                C_V_ACTIVE_TIME     =   10'd480 ,
+                C_V_FRONT_PORCH     =   10'd10  ,
+                C_V_FRAME_PERIOD    =   10'd525 ;
 
     reg [9:0] R_h_cnt;
     reg [9:0] R_v_cnt;
@@ -43,7 +43,7 @@ module vga(
     always @(posedge I_clk_25M or negedge I_rst_n) begin
         if(!I_rst_n) R_v_cnt <= 10'd0;
         else if (R_v_cnt == C_V_FRAME_PERIOD - 1) R_v_cnt <= 10'd0;
-        else if (R_h_cnt == C_H_LINE_PERIOD - 1) R_v_cnt = R_v_cnt + 1;
+        else if (R_h_cnt == C_H_LINE_PERIOD - 1) R_v_cnt <= R_v_cnt + 1;
         else R_v_cnt <= R_v_cnt;
     end
 
@@ -80,10 +80,5 @@ module vga(
         end
     end
 
-    // blk_mem_gen_0 blk_mem_gen_0(
-    //     .clka(I_clk_25M),
-    //     .addra(read_addr),
-    //     .douta(pixel_data)
-    // );
 endmodule
 

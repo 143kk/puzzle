@@ -3,5 +3,5 @@
 
 # XDC: new/puzzle.xdc
 
-# IP: ip/img_mem/img_mem.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==img_mem || ORIG_REF_NAME==img_mem} -quiet] -quiet
+# IP: ip/clk_25m/clk_25m.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==clk_25m || ORIG_REF_NAME==clk_25m} -quiet] -quiet

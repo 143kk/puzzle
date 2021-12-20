@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sat Dec 18 22:03:21 2021
-# Process ID: 3900
+# Start of session at: Mon Dec 20 21:41:34 2021
+# Process ID: 744
 # Current directory: C:/Users/Arv/puzzle/puzzle.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: C:/Users/Arv/puzzle/puzzle.runs/synth_1/top.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10532 
+INFO: Helper process launched with PID 4876 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 342.785 ; gain = 101.270
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 343.102 ; gain = 101.398
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:1]
-INFO: [Synth 8-638] synthesizing module 'clk_25m' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'clk_25m' (1#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
+INFO: [Synth 8-638] synthesizing module 'clk_25m' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'clk_25m' (1#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/realtime/clk_25m_stub.v:5]
 INFO: [Synth 8-638] synthesizing module 'check' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v:2]
 INFO: [Synth 8-256] done synthesizing module 'check' (2#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v:2]
 INFO: [Synth 8-638] synthesizing module 'music_led_top' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music_led_top.v:2]
@@ -102,29 +102,29 @@ INFO: [Synth 8-256] done synthesizing module 'BaudTickGen' (9#1) [C:/Users/Arv/p
 INFO: [Synth 8-256] done synthesizing module 'async_receiver' (10#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:74]
 WARNING: [Synth 8-350] instance 'rx_inst' of module 'async_receiver' requires 6 connections, but only 5 given [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:95]
 INFO: [Synth 8-638] synthesizing module 'vga' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v:3]
-	Parameter C_H_SYNC_PULSE bound to: 96 - type: integer 
-	Parameter C_H_BACK_PORCH bound to: 48 - type: integer 
-	Parameter C_H_ACTIVE_TIME bound to: 640 - type: integer 
-	Parameter C_H_FRONT_PORCH bound to: 16 - type: integer 
-	Parameter C_H_LINE_PERIOD bound to: 800 - type: integer 
-	Parameter C_V_SYNC_PULSE bound to: 2 - type: integer 
-	Parameter C_V_BACK_PORCH bound to: 33 - type: integer 
-	Parameter C_V_ACTIVE_TIME bound to: 480 - type: integer 
-	Parameter C_V_FRONT_PORCH bound to: 10 - type: integer 
-	Parameter C_V_FRAME_PERIOD bound to: 525 - type: integer 
+	Parameter C_H_SYNC_PULSE bound to: 10'b0001100000 
+	Parameter C_H_BACK_PORCH bound to: 10'b0000110000 
+	Parameter C_H_ACTIVE_TIME bound to: 10'b1010000000 
+	Parameter C_H_FRONT_PORCH bound to: 10'b0000010000 
+	Parameter C_H_LINE_PERIOD bound to: 10'b1100100000 
+	Parameter C_V_SYNC_PULSE bound to: 10'b0000000010 
+	Parameter C_V_BACK_PORCH bound to: 10'b0000100001 
+	Parameter C_V_ACTIVE_TIME bound to: 10'b0111100000 
+	Parameter C_V_FRONT_PORCH bound to: 10'b0000001010 
+	Parameter C_V_FRAME_PERIOD bound to: 10'b1000001101 
 INFO: [Synth 8-256] done synthesizing module 'vga' (11#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v:3]
 INFO: [Synth 8-638] synthesizing module 'anti_shake_single' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:23]
 INFO: [Synth 8-256] done synthesizing module 'anti_shake_single' (12#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:23]
 INFO: [Synth 8-638] synthesizing module 'pixel_ctrl' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v:3]
-	Parameter C_PIC_WIDTH bound to: 480 - type: integer 
-	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
-	Parameter C_PIC_WIDTH_HALF bound to: 240 - type: integer 
-	Parameter C_PIC_HEIGHT_HALF bound to: 240 - type: integer 
+	Parameter C_PIC_WIDTH bound to: 10'b0111100000 
+	Parameter C_PIC_HEIGHT bound to: 10'b0111100000 
+	Parameter C_PIC_WIDTH_HALF bound to: 10'b0011110000 
+	Parameter C_PIC_HEIGHT_HALF bound to: 10'b0011110000 
 INFO: [Synth 8-638] synthesizing module 'pixel_transformer' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:3]
-	Parameter C_PIC_WIDTH bound to: 480 - type: integer 
-	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
-	Parameter C_PIC_WIDTH_HALF bound to: 240 - type: integer 
-	Parameter C_PIC_HEIGHT_HALF bound to: 240 - type: integer 
+	Parameter C_PIC_WIDTH bound to: 10'b0111100000 
+	Parameter C_PIC_HEIGHT bound to: 10'b0111100000 
+	Parameter C_PIC_WIDTH_HALF bound to: 10'b0011110000 
+	Parameter C_PIC_HEIGHT_HALF bound to: 10'b0011110000 
 INFO: [Synth 8-256] done synthesizing module 'pixel_transformer' (13#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:3]
 INFO: [Synth 8-256] done synthesizing module 'pixel_ctrl' (14#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v:3]
 INFO: [Synth 8-638] synthesizing module 'game_control' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/game_control.v:1]
@@ -136,13 +136,12 @@ INFO: [Synth 8-638] synthesizing module 'img_mem_ctrl' [C:/Users/Arv/puzzle/puzz
 	Parameter C_PIC_WIDTH bound to: 480 - type: integer 
 	Parameter C_PIC_HEIGHT bound to: 480 - type: integer 
 	Parameter C_PIC_DEPTH bound to: 230400 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'img_mem' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'img_mem' (17#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'img_mem' [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'img_mem' (17#1) [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/realtime/img_mem_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'img_mem_ctrl' (18#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v:1]
 WARNING: [Synth 8-3848] Net O_uart_tx in module/entity top does not have driver. [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:7]
 WARNING: [Synth 8-3848] Net O_seg_en_step in module/entity top does not have driver. [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:25]
 INFO: [Synth 8-256] done synthesizing module 'top' (19#1) [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v:1]
-WARNING: [Synth 8-3331] design img_mem_ctrl has unconnected port I_read_en
 WARNING: [Synth 8-3331] design top has unconnected port O_uart_tx
 WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[3]
 WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[2]
@@ -150,7 +149,7 @@ WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[1]
 WARNING: [Synth 8-3331] design top has unconnected port O_seg_en_step[0]
 WARNING: [Synth 8-3331] design top has unconnected port I_unsolvable
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 395.340 ; gain = 153.824
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.188 ; gain = 153.484
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -160,17 +159,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 395.340 ; gain = 153.824
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 395.188 ; gain = 153.484
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
-Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp2/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
-Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
-Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc] for cell 'clk_25m'
+Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp2/clk_25m_in_context.xdc] for cell 'clk_25m'
+Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp2/clk_25m_in_context.xdc] for cell 'clk_25m'
+Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp3/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
+Finished Parsing XDC File [C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp3/img_mem_in_context.xdc] for cell 'imc_inst/img_mem'
 Parsing XDC File [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc]
 WARNING: [Vivado 12-584] No ports matched 'I_btn_rand'. [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc:76]
 WARNING: [Vivado 12-584] No ports matched 'I_btn_rand'. [C:/Users/Arv/puzzle/puzzle.srcs/constrs_1/new/puzzle.xdc:77]
@@ -185,26 +184,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 761.172 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 761.863 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 761.863 ; gain = 520.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 761.863 ; gain = 520.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-3900-DESKTOP-VV69JL5/dcp3/clk_25m_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp2/clk_25m_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for I_clk_100M. (constraint file  C:/Users/Arv/puzzle/puzzle.runs/synth_1/.Xil/Vivado-744-DESKTOP-VV69JL5/dcp2/clk_25m_in_context.xdc, line 4).
 Applied set_property DONT_TOUCH = true for clk_25m. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for imc_inst/img_mem. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 761.172 ; gain = 519.656
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 761.863 ; gain = 520.160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "O_hasSolution" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "clk_bps" won't be mapped to RAM because it is too sparse
@@ -219,6 +218,7 @@ INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address 
 INFO: [Synth 8-5544] ROM "RxD_bit" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "OversamplingCnt0" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 WARNING: [Synth 8-6014] Unused sequential element GapCnt_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v:169]
+INFO: [Synth 8-5546] ROM "R_v_cnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "t2" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v:43]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v:32]
@@ -247,7 +247,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'O_pos_b_reg' [C:/Users/Arv/
 WARNING: [Synth 8-327] inferring latch for variable 'O_pos_c_reg' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:18]
 WARNING: [Synth 8-327] inferring latch for variable 'O_pos_d_reg' [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v:19]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 761.172 ; gain = 519.656
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 761.863 ; gain = 520.160
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -285,7 +285,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 11    
 	                3 Bit    Registers := 1     
 	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 27    
+	                1 Bit    Registers := 29    
 +---Muxes : 
 	   2 Input    334 Bit        Muxes := 1     
 	   4 Input    334 Bit        Muxes := 1     
@@ -437,6 +437,8 @@ Detailed RTL Component Info :
 	   4 Input      8 Bit        Muxes := 1     
 Module pixel_ctrl 
 Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 2     
 Module permutation 
@@ -482,6 +484,7 @@ WARNING: [Synth 8-6014] Unused sequential element rx_inst/RxD_endofpacket_reg wa
 INFO: [Synth 8-5546] ROM "check_inst/O_hasSolution" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ml_top_inst/counter/cnt_second" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ml_top_inst/counter/clk_bps" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "vga_inst/R_v_cnt" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ass_left/t2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ass_right/t2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "ass_up/t2" won't be mapped to RAM because it is too sparse
@@ -615,7 +618,7 @@ WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[2]) is unuse
 WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[1]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (rx_inst/tickgen/Acc_reg[0]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 761.172 ; gain = 519.656
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 761.863 ; gain = 520.160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -661,13 +664,13 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_25m/clk_out1' to pin 'clk_25m/bbstub_clk_out1/O'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 804.773 ; gain = 563.258
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 801.293 ; gain = 559.590
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 839.488 ; gain = 597.973
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 836.238 ; gain = 594.535
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -704,7 +707,7 @@ WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[9]) 
 WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[8]) is unused and will be removed from module top.
 WARNING: [Synth 8-3332] Sequential element (ml_top_inst/m/melody_length_reg[7]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -729,7 +732,7 @@ INFO: [Synth 8-5365] Flop sc_inst/fsm_reg[0] is being inverted and renamed to sc
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -742,7 +745,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -754,25 +757,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -794,15 +797,15 @@ Report Cell Usage:
 |2     |img_mem |     1|
 |3     |CARRY4  |   106|
 |4     |DSP48E1 |     1|
-|5     |LUT1    |    27|
-|6     |LUT2    |   173|
-|7     |LUT3    |   231|
+|5     |LUT1    |    29|
+|6     |LUT2    |   176|
+|7     |LUT3    |   220|
 |8     |LUT4    |   123|
-|9     |LUT5    |   140|
-|10    |LUT6    |   199|
+|9     |LUT5    |   138|
+|10    |LUT6    |   206|
 |11    |MUXF7   |    11|
 |12    |MUXF8   |     4|
-|13    |FDCE    |   237|
+|13    |FDCE    |   239|
 |14    |FDPE    |     5|
 |15    |FDRE    |   207|
 |16    |FDSE    |     1|
@@ -816,13 +819,13 @@ Report Instance Areas:
 +------+----------------+--------------------+------+
 |      |Instance        |Module              |Cells |
 +------+----------------+--------------------+------+
-|1     |top             |                    |  1546|
-|2     |  ass_down      |anti_shake_single   |    58|
-|3     |  ass_left      |anti_shake_single_0 |    61|
-|4     |  ass_right     |anti_shake_single_1 |    61|
+|1     |top             |                    |  1547|
+|2     |  ass_down      |anti_shake_single   |    57|
+|3     |  ass_left      |anti_shake_single_0 |    59|
+|4     |  ass_right     |anti_shake_single_1 |    60|
 |5     |  ass_up        |anti_shake_single_2 |    62|
 |6     |  check_inst    |check               |     2|
-|7     |  gamectrl_inst |game_control        |    66|
+|7     |  gamectrl_inst |game_control        |    68|
 |8     |    perm_inst   |permutation         |    17|
 |9     |  imc_inst      |img_mem_ctrl        |    61|
 |10    |  ml_top_inst   |music_led_top       |   671|
@@ -831,18 +834,18 @@ Report Instance Areas:
 |13    |    l           |led_music_control   |    40|
 |14    |    m           |Music               |   517|
 |15    |  pctrl_inst    |pixel_ctrl          |    15|
-|16    |    ptran_inst  |pixel_transformer   |    14|
-|17    |  rx_inst       |async_receiver      |    74|
-|18    |    tickgen     |BaudTickGen         |    28|
+|16    |    ptran_inst  |pixel_transformer   |    12|
+|17    |  rx_inst       |async_receiver      |    76|
+|18    |    tickgen     |BaudTickGen         |    29|
 |19    |  sc_inst       |second_counter      |   177|
-|20    |  vga_inst      |vga                 |   173|
+|20    |  vga_inst      |vga                 |   174|
 +------+----------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 56 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:36 . Memory (MB): peak = 851.555 ; gain = 244.207
-Synthesis Optimization Complete : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 851.555 ; gain = 610.039
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 849.484 ; gain = 241.105
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 849.484 ; gain = 607.781
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 144 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -854,10 +857,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 8 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-193 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+195 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 851.555 ; gain = 621.570
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 849.484 ; gain = 619.254
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Arv/puzzle/puzzle.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.091 . Memory (MB): peak = 851.555 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Dec 18 22:04:15 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 849.484 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 20 21:42:21 2021...
