@@ -12,6 +12,7 @@ module game_control(
     output reg [1:0] O_pos_c,
     output reg [1:0] O_pos_d,
     input I_black_EN,
+    input I_rand_EN,
     output O_completed
 );
 
@@ -23,6 +24,24 @@ wire [1:0] pos_d_native;
 wire game_start = I_black_EN;
 
 assign O_completed = (O_pos_a == 2'b00) && (O_pos_b == 2'b01) && (O_pos_c == 2'b10) && (O_pos_d == 2'b11);
+
+wire W_left, W_right, W_up, W_down;
+wire W_left_rand, W_right_rand, W_up_rand, W_down_rand;
+
+random_move rand_mv_inst(
+    .I_clk(I_clk),
+    .I_rst_n(I_rst_n),
+    .I_en(I_rand_EN),
+    .O_mv_left(W_left_rand),
+    .O_mv_right(W_right_rand),
+    .O_mv_up(W_up_rand),
+    .O_mv_down(W_down_rand)
+);
+
+assign W_left = I_btn_left | W_left_rand;
+assign W_right = I_btn_right | W_right_rand;
+assign W_up = I_btn_up | W_up_rand;
+assign W_down = I_btn_down | W_down_rand;
 
 permutation perm_inst(
     .I_num(I_num),
@@ -49,7 +68,7 @@ always @(posedge I_clk, negedge I_rst_n) begin
         end
     end
     else if(game_start) begin
-        if(I_btn_left) begin
+        if(W_left) begin
             if(O_pos_b == 2'b10) begin
                 O_pos_b <= O_pos_a;
                 O_pos_a <= O_pos_b;
@@ -59,7 +78,7 @@ always @(posedge I_clk, negedge I_rst_n) begin
                 O_pos_c <= O_pos_d;
             end
         end
-        else if(I_btn_right) begin
+        else if(W_right) begin
             if(O_pos_a == 2'b10) begin
                 O_pos_b <= O_pos_a;
                 O_pos_a <= O_pos_b;
@@ -69,7 +88,7 @@ always @(posedge I_clk, negedge I_rst_n) begin
                 O_pos_d <= O_pos_c;
             end
         end
-        else if(I_btn_up) begin
+        else if(W_up) begin
             if(O_pos_c == 2'b10) begin
                 O_pos_a <= O_pos_c;
                 O_pos_c <= O_pos_a;
@@ -79,7 +98,7 @@ always @(posedge I_clk, negedge I_rst_n) begin
                 O_pos_d <= O_pos_b;
             end
         end
-        else if(I_btn_down) begin
+        else if(W_down) begin
             if(O_pos_a == 2'b10) begin
                 O_pos_c <= O_pos_a;
                 O_pos_a <= O_pos_c;

@@ -16,6 +16,8 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,6 +33,7 @@ set_property ip_output_repo c:/Users/Arv/puzzle/puzzle.cache/ip [current_project
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/Arv/Desktop/3.coe
 read_verilog -library xil_defaultlib {
+  C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v
@@ -44,6 +47,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v
+  C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/random_move.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/top.v

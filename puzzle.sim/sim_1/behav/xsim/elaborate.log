@@ -1,22 +1,42 @@
 Vivado Simulator 2017.4
 Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
-Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto b81873b879ff40c7841812b8f28a1636 --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_mem_ctrl_behav xil_defaultlib.tb_mem_ctrl xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto b81873b879ff40c7841812b8f28a1636 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot LFSR_TB_behav xil_defaultlib.LFSR_TB xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 18 for port addra [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v:55]
-WARNING: [VRFC 10-1783] select index 30 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2419]
-WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+WARNING: [VRFC 10-1783] select index 5 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:58]
+WARNING: [VRFC 10-1783] select index 6 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:61]
+WARNING: [VRFC 10-1783] select index 7 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:64]
+WARNING: [VRFC 10-1783] select index 8 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:67]
+WARNING: [VRFC 10-1783] select index 9 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:70]
+WARNING: [VRFC 10-1783] select index 10 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:73]
+WARNING: [VRFC 10-1783] select index 11 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:76]
+WARNING: [VRFC 10-1783] select index 12 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:79]
+WARNING: [VRFC 10-1783] select index 13 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:82]
+WARNING: [VRFC 10-1783] select index 14 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:85]
+WARNING: [VRFC 10-1783] select index 15 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:88]
+WARNING: [VRFC 10-1783] select index 16 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:91]
+WARNING: [VRFC 10-1783] select index 17 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:94]
+WARNING: [VRFC 10-1783] select index 18 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:97]
+WARNING: [VRFC 10-1783] select index 19 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:100]
+WARNING: [VRFC 10-1783] select index 20 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:103]
+WARNING: [VRFC 10-1783] select index 21 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:106]
+WARNING: [VRFC 10-1783] select index 22 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:109]
+WARNING: [VRFC 10-1783] select index 23 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:112]
+WARNING: [VRFC 10-1783] select index 24 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:115]
+WARNING: [VRFC 10-1783] select index 25 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:118]
+WARNING: [VRFC 10-1783] select index 26 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:121]
+WARNING: [VRFC 10-1783] select index 27 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:124]
+WARNING: [VRFC 10-1783] select index 28 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:127]
+WARNING: [VRFC 10-1783] select index 29 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:130]
+WARNING: [VRFC 10-1783] select index 30 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:133]
+WARNING: [VRFC 10-1783] select index 31 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:136]
+WARNING: [VRFC 10-1783] select index 32 into r_LFSR is out of bounds [C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v:139]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/Users/Arv/puzzle/puzzle.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
-Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
-Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
-Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
-Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
-Compiling module xil_defaultlib.blk_mem_gen_0
-Compiling module xil_defaultlib.img_mem_ctrl_default
-Compiling module xil_defaultlib.tb_mem_ctrl
+Compiling module xil_defaultlib.LFSR(NUM_BITS=4)
+Compiling module xil_defaultlib.LFSR_TB
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot tb_mem_ctrl_behav
+Built simulation snapshot LFSR_TB_behav

@@ -72,13 +72,17 @@ set_property PACKAGE_PIN P2 [get_ports I_btn_down]
 set_property PACKAGE_PIN R1 [get_ports I_btn_right]
 set_property PACKAGE_PIN P1 [get_ports I_btn_left]
 
-# Button of random function
-set_property IOSTANDARD LVCMOS33 [get_ports I_btn_rand]
-set_property PACKAGE_PIN S6 [get_ports I_btn_rand]
+# # Button of random function
+# set_property IOSTANDARD LVCMOS33 [get_ports I_btn_rand]
+# set_property PACKAGE_PIN S6 [get_ports I_btn_rand]
 
 # LED of status "completed"
 set_property IOSTANDARD LVCMOS33 [get_ports O_completed]
 set_property PACKAGE_PIN E22 [get_ports O_completed]
+
+# Switch of enabling rand module
+set_property IOSTANDARD LVCMOS33 [get_ports I_rand_EN]
+set_property PACKAGE_PIN W4 [get_ports I_rand_EN]
 
 # counter & 7-seg tube by ljy
 set_property IOSTANDARD LVCMOS33 [get_ports {O_seg_en_time[0]}]

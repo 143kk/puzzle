@@ -19,6 +19,7 @@ module top(
     input I_btn_down,
 
     output O_completed,
+    input I_rand_EN,
 
     // ljy
     output [3:0] O_seg_en_time,
@@ -175,7 +176,8 @@ module top(
         .I_btn_up(W_btn_up), 
         .I_btn_down(W_btn_down),
         .I_black_EN(I_black_EN),
-        .I_clk(W_clk_25M)
+        .I_clk(W_clk_25M),
+        .I_rand_EN(I_rand_EN)
     );
 
     img_mem_ctrl imc_inst(
