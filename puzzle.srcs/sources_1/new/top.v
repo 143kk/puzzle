@@ -77,6 +77,7 @@ module top(
         .ID(pos_d),
         .I_clk(I_clk_100M),
         .I_rst_n(I_rst_n),
+        .hard(I_hard_mode),
         .I_black_EN(I_black_EN),
         .O_hasSolution(W_hasSolution)
     );
@@ -92,13 +93,27 @@ module top(
         .O_led(O_led)
     );
 
-    second_counter sc_inst(
-        .clk(I_clk_100M), 
+    wire W_moving;
+
+    second_counter step_cnt_inst(
+        .clk(I_clk_100M),
         .switch(I_black_EN),
+        .set(I_btn_set),
         .rst(I_rst_n),
         .num(O_num),
         .seg_en(O_seg_en_time)
     );
+
+    // counter_ss cnt_inst(
+    //     .clk(I_clk_100M), 
+    //     .switch(I_black_EN),
+    //     .set(I_btn_set),
+    //     .rst(I_rst_n),
+    //     .num(O_num),
+    //     .seg_en_time(O_seg_en_time),
+    //     .seg_en_step(O_seg_en_step),
+    //     .step(O_moving)
+    // );
 
     async_receiver rx_inst(
         .clk(W_clk_25M), 
@@ -198,7 +213,8 @@ module top(
         .I_clk(W_clk_25M),
         .I_rand_move_EN(I_rand_move_EN),
         .I_rand_set_EN(I_rand_set_EN),
-        .I_hard_mode(I_hard_mode)
+        .I_hard_mode(I_hard_mode),
+        .O_moving(W_moving)
     );
 
     img_mem_ctrl imc_inst(

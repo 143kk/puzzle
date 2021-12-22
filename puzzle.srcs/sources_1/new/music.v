@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module Music(input clk, input wire[4:0] mode, output reg[0:0] music = 0);
+module Music(input clk, input wire[4:0] mode, output reg[0:0] music = 0, output reg[6:0] O_led);
 
 parameter do_low = 191110;
 parameter re_low = 170259;
@@ -33,17 +33,17 @@ parameter index_period = beat + gap;
 parameter silence = beat<<9;
 
 /*
-0 - silence
+0 - silence 
 1 - 7 low
 8 - 14 meidum
 15 - 21 high
 */  
-parameter Star = 240'b010000100001100011000110101101011000000001011010110101001010010010100101000000000110001100010110101101010010100100100000011000110001011010110101001010010010000001000010000110001100011010110101100000000101101011010100101001001010010100000000;
-parameter HappyBirthday = 130'b0111110000011111000110010000000000001101011100111110001100110110001111011111000001100011010110001110011100111101100011010010100101;
+parameter Star = 420'b000000100000000010010000001001000000101000000010100000001011000000101100000011000000001101000000110100000011000000001100000000100000000010000000001001000000101000000010100000001011000000101100000011000000001100000000100100000010100000001010000000101100000010110000001100000000110000000010000000001001000000100100000010100000001010000000101100000010110000001100000000110100000011010000001100000000110000000010000000001000;
+parameter Noise = 210'b010000100101001010100101001011010110110001101011010110001100010000100001001010100101001011010110110001100010010101001010010110101101100011000100001001010010101001010010110101101100011010110101100011000100001000;
 parameter MerryChristmas = 335'b01111011110111101110100000110101100011001001101111100001000110000000000110001100011010111001111011100000001110011110111101111011000000001111011110111010000011010110001100000000110101111100001000110010100011000100000011000110000000011000111001111100001000110000100000000001101000000000001101011010111001111100000111101111000000110001100;
 
-parameter ST_length = 46;
-parameter HB_length = 26;
+parameter ST_length = 84;
+parameter NO_length = 42;
 parameter MC_length = 67;
 
 reg[29:0] freq =  beat;
@@ -75,13 +75,13 @@ always @(posedge clk) begin
         else begin isPeriodic = 0; melody_length = 1; end
         
         if(mode == 17) melody_length = MC_length;
-        if(mode == 18) melody_length = HB_length;
-        if(mode == 19) melody_length = ST_length;
+        if(mode == 18) melody_length = ST_length;
+        if(mode == 19) melody_length = NO_length;
        
         case(mode)
             17: melody = MerryChristmas;
-            18: melody = HappyBirthday;
-            19: melody = Star;
+            18: melody = Star;
+            19: melody = Noise;
             default : melody = mode;
         endcase
        
@@ -114,7 +114,6 @@ end
 
 
 always @ * begin
-
 if(isEnd)
 freq = silence;
 else
@@ -145,5 +144,37 @@ default : freq = silence;
 endcase
 end
 
+always @(freq) begin
+    case(freq)
+    silence : O_led = 7'b0000_000;
+    do_low  : O_led = 7'b0000_001;
+    re_low  : O_led = 7'b0000_010;
+    me_low  : O_led = 7'b0000_100;
+    fa_low  : O_led = 7'b0001_000;
+    so_low  : O_led = 7'b0010_000;
+    la_low  : O_led = 7'b0100_000;
+    si_low  : O_led = 7'b1000_000;
+
+    do      : O_led = 7'b0000_001;
+    re      : O_led = 7'b0000_010;
+    me      : O_led = 7'b0000_100;
+    fa      : O_led = 7'b0001_000;
+    so      : O_led = 7'b0010_000;
+    la      : O_led = 7'b0100_000;
+    si      : O_led = 7'b1000_000;
+    
+    do_high : O_led = 7'b0000_001;
+    re_high : O_led = 7'b0000_010;
+    me_high : O_led = 7'b0000_100;
+    fa_high : O_led = 7'b0001_000;
+    so_high : O_led = 7'b0010_000;
+    la_high : O_led = 7'b0100_000;
+    si_high : O_led = 7'b1000_000;
+    default : O_led = 7'b0000_000;
+    endcase
+end
+
+
 
 endmodule
+

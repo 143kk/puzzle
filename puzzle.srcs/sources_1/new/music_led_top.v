@@ -6,8 +6,8 @@ module music_led_top(
     input I_completed,
     input I_unsolvable,
     input I_music_on,
-    output wire  O_music, 
-    output wire [15:0] O_led 
+    output wire  O_music, //绑定蜂鸣器
+    output wire [15:0] O_led   //绑定16个灯
 );
 
 wire clk_bps;
@@ -39,13 +39,16 @@ flash_led f(
     .I_dir(dir),
  	.I_clk_bps(clk_bps),
     .I_led_on(led_on),
- 	.O_led(O_led)
+ 	.O_led(O_led[7:0])
 );
+
+assign O_led[8] = 0;
 
 Music m(
     .clk(I_clk),
     .mode(mode),
-    .music(O_music)
+    .music(O_music),
+    .O_led(O_led[15:9])
 );
 
 

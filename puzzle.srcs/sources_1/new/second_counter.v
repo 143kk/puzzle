@@ -22,21 +22,21 @@
 module second_counter(
 input clk,
 input wire switch,
+input wire set,
 input rst, 
 output reg [7:0] num, 
 output reg [3:0] seg_en
     );
-parameter    SEG_NUM0 = 8'b0100_0000,  
-              SEG_NUM1 = 8'b0111_1001,
-			  SEG_NUM2 = 8'b0010_0100,
-			  SEG_NUM3 = 8'b0011_0000,
-			  SEG_NUM4 = 8'b0001_1001,
-			  SEG_NUM5 = 8'b0001_0010,
-			  SEG_NUM6 = 8'b0000_0010,
-			  SEG_NUM7 = 8'b0111_1000,
-			  SEG_NUM8 = 8'b0000_0000,
-			  SEG_NUM9 = 8'b0001_0000;
-			  
+parameter    SEG_NUM0 = 8'b1100_0000,  
+              SEG_NUM1 = 8'b1111_1001,
+			  SEG_NUM2 = 8'b1010_0100,
+			  SEG_NUM3 = 8'b1011_0000,
+			  SEG_NUM4 = 8'b1001_1001,
+			  SEG_NUM5 = 8'b1001_0010,
+			  SEG_NUM6 = 8'b1000_0010,
+			  SEG_NUM7 = 8'b1111_1000,
+			  SEG_NUM8 = 8'b1000_0000,
+			  SEG_NUM9 = 8'b1001_0000;
 parameter    DUAN_3 = 4'b0111,			  
 			  DUAN_2 = 4'b1011,
 			  DUAN_1 = 4'b1101,
@@ -76,24 +76,28 @@ end
  
 always @ (posedge clk_1ms or negedge rst) begin
 if (~rst) begin
-fsm = 1;
-cen = 0;
+fsm <= 1;
+cen <= 0;
+end
+else if(set) begin
+fsm <= 1;
+cen <= 0;
 end
 else begin
  case(fsm)
     0: begin   
-	    cen = 1;
+	    cen <= 1;
 	    if(!switch)
-		 fsm = 1;
+		 fsm <= 1;
 		 else	
-		  fsm = 0;
+		  fsm <= 0;
 	    end
 	 1: begin 
-	    cen = 0;
+	    cen <= 0;
 	    if(switch) 
-		 fsm = 0;
+		 fsm <= 0;
 		 else
-		 fsm = 1;
+		 fsm <= 1;
        end		 
  endcase
 end
@@ -102,6 +106,15 @@ end
  
 always @ (posedge clk_1ms or negedge rst) begin 
 if(~rst)begin
+ms1 <= 0;
+ms100 <= 0;
+ms10 <= 0;
+s1 <= 0;
+s2 <= 0;
+s3 <= 0;
+s4 <= 0;
+end 
+else if(set)begin
 ms1 <= 0;
 ms100 <= 0;
 ms10 <= 0;
@@ -178,15 +191,6 @@ if(cen) begin
                          endcase          
 end
 end
-//else begin
-//ms1 <= 0;
-//ms100 <= 0;
-//ms10 <= 0;
-//s1 <= 0;
-//s2 <= 0;
-//s3 <= 0;
-//s4 <= 0;
-//end
 end
  
 always @ (posedge clk) begin

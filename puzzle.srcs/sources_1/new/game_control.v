@@ -20,7 +20,8 @@ module game_control(
     input I_rand_move_EN,
     input I_rand_set_EN,
     input I_hard_mode,
-    output O_completed
+    output O_completed,
+    output reg O_moving
 );
 
 wire num_valid;
@@ -75,6 +76,7 @@ permutation perm_inst(
 
 always @(posedge I_clk, negedge I_rst_n) begin
     if(~I_rst_n) begin
+        O_moving <= 0;
         if(I_hard_mode) begin
             O_pos_a <= 4'b0000;
             O_pos_b <= 4'b0001;
@@ -96,6 +98,7 @@ always @(posedge I_clk, negedge I_rst_n) begin
         end
     end
     else if(I_btn_set) begin
+        O_moving <= 0;
         if(I_hard_mode) begin
             O_pos_a <= 4'b0000;
             O_pos_b <= 4'b0001;
@@ -129,106 +132,135 @@ always @(posedge I_clk, negedge I_rst_n) begin
                 if(O_pos_i == 4'b1000) begin
                     O_pos_h <= O_pos_i;
                     O_pos_i <= O_pos_h;
+                    O_moving <= 1;
                 end
                 else if(O_pos_h == 4'b1000) begin
                     O_pos_g <= O_pos_h;
                     O_pos_h <= O_pos_g;
+                    O_moving <= 1;
                 end 
                 else if(O_pos_f == 4'b1000) begin
                     O_pos_f <= O_pos_e;
                     O_pos_e <= O_pos_f;
+                    O_moving <= 1;
                 end
                 else if(O_pos_e == 4'b1000) begin
                     O_pos_e <= O_pos_d;
                     O_pos_d <= O_pos_e;
+                    O_moving <= 1;
                 end
                 else if(O_pos_c == 4'b1000) begin
                     O_pos_c <= O_pos_b;
                     O_pos_b <= O_pos_c;
+                    O_moving <= 1;
                 end 
                 else if(O_pos_b == 4'b1000) begin
                     O_pos_b <= O_pos_a;
                     O_pos_a <= O_pos_b;
+                    O_moving <= 1;
                 end 
+                else O_moving <= 0;
             end
             4'b01xx: begin
                 if(O_pos_a == 4'b1000) begin
                     O_pos_b <= O_pos_a;
                     O_pos_a <= O_pos_b;
+                    O_moving <= 1;
                 end
                 else if(O_pos_b == 4'b1000) begin
                     O_pos_c <= O_pos_b;
                     O_pos_b <= O_pos_c;
+                    O_moving <= 1;
                 end
                 else if(O_pos_d == 4'b1000) begin
                     O_pos_d <= O_pos_e;
                     O_pos_e <= O_pos_d;
+                    O_moving <= 1;
                 end
                 else if(O_pos_e == 4'b1000) begin
                     O_pos_e <= O_pos_f;
                     O_pos_f <= O_pos_e;
+                    O_moving <= 1;
                 end
                 else if(O_pos_g == 4'b1000) begin
                     O_pos_g <= O_pos_h;
                     O_pos_h <= O_pos_g;
+                    O_moving <= 1;
                 end
                 else if(O_pos_h == 4'b1000) begin
-                    O_pos_g <= O_pos_h;
-                    O_pos_h <= O_pos_g;
+                    O_pos_i <= O_pos_h;
+                    O_pos_h <= O_pos_i;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
             4'b001x: begin
                 if(O_pos_d == 4'b1000) begin
                     O_pos_a <= O_pos_d;
                     O_pos_d <= O_pos_a;
+                    O_moving <= 1;
                 end
                 else if(O_pos_e == 4'b1000) begin
                     O_pos_e <= O_pos_b;
                     O_pos_b <= O_pos_e;
+                    O_moving <= 1;
                 end
                 else if(O_pos_f == 4'b1000) begin
                     O_pos_f <= O_pos_c;
                     O_pos_c <= O_pos_f;
+                    O_moving <= 1;
                 end
                 else if(O_pos_g == 4'b1000) begin
                     O_pos_g <= O_pos_d;
                     O_pos_d <= O_pos_g;
+                    O_moving <= 1;
                 end
                 else if(O_pos_h == 4'b1000) begin
                     O_pos_h <= O_pos_e;
                     O_pos_e <= O_pos_h;
+                    O_moving <= 1;
                 end
                 else if(O_pos_i == 4'b1000) begin
                     O_pos_i <= O_pos_f;
                     O_pos_f <= O_pos_i;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
             4'b0001: begin
                 if(O_pos_a == 4'b1000) begin
                     O_pos_a <= O_pos_d;
                     O_pos_d <= O_pos_a;
+                    O_moving <= 1;
                 end
                 else if(O_pos_b == 4'b1000) begin
                     O_pos_b <= O_pos_e;
                     O_pos_e <= O_pos_b;
+                    O_moving <= 1;
                 end
                 else if(O_pos_c == 4'b1000) begin
                     O_pos_c <= O_pos_f;
                     O_pos_f <= O_pos_c;
+                    O_moving <= 1;
                 end
                 else if(O_pos_d == 4'b1000) begin
                     O_pos_d <= O_pos_g;
                     O_pos_g <= O_pos_d;
+                    O_moving <= 1;
                 end
                 else if(O_pos_e == 4'b1000) begin
                     O_pos_h <= O_pos_e;
                     O_pos_e <= O_pos_h;
+                    O_moving <= 1;
                 end
                 else if(O_pos_f == 4'b1000) begin
                     O_pos_f <= O_pos_i;
                     O_pos_i <= O_pos_f;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
+            default: O_moving <= 0;
             endcase
         end
         else begin
@@ -237,83 +269,57 @@ always @(posedge I_clk, negedge I_rst_n) begin
                 if(O_pos_b[1:0] == 2'b10) begin
                     O_pos_b <= O_pos_a;
                     O_pos_a <= O_pos_b;
+                    O_moving <= 1;
                 end
                 else if(O_pos_d[1:0] == 2'b10) begin
                     O_pos_d <= O_pos_c;
                     O_pos_c <= O_pos_d;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
             4'b01xx: begin
                     if(O_pos_a[1:0] == 2'b10) begin
                     O_pos_b <= O_pos_a;
                     O_pos_a <= O_pos_b;
+                    O_moving <= 1;
                 end
                 else if(O_pos_c[1:0] == 2'b10) begin
                     O_pos_c <= O_pos_d;
                     O_pos_d <= O_pos_c;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
             4'b001x: begin
                 if(O_pos_c[1:0] == 2'b10) begin
                     O_pos_a <= O_pos_c;
                     O_pos_c <= O_pos_a;
+                    O_moving <= 1;
                 end
                 else if(O_pos_d[1:0] == 2'b10) begin
                     O_pos_b <= O_pos_d;
                     O_pos_d <= O_pos_b;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
             4'b0001: begin
                 if(O_pos_a[1:0] == 2'b10) begin
                     O_pos_c <= O_pos_a;
                     O_pos_a <= O_pos_c;
+                    O_moving <= 1;
                 end
                 else if(O_pos_b[1:0] == 2'b10) begin
                     O_pos_d <= O_pos_b;
                     O_pos_b <= O_pos_d;
+                    O_moving <= 1;
                 end
+                else O_moving <= 0;
             end
+            default: O_moving <= 0;
             endcase
-            // if(W_left) begin
-            //     if(O_pos_b == 2'b10) begin
-            //         O_pos_b <= O_pos_a;
-            //         O_pos_a <= O_pos_b;
-            //     end
-            //     else if(O_pos_d == 2'b10) begin
-            //         O_pos_d <= O_pos_c;
-            //         O_pos_c <= O_pos_d;
-            //     end
-            // end
-            // else if(W_right) begin
-            //     if(O_pos_a == 2'b10) begin
-            //         O_pos_b <= O_pos_a;
-            //         O_pos_a <= O_pos_b;
-            //     end
-            //     else if(O_pos_c == 2'b10) begin
-            //         O_pos_c <= O_pos_d;
-            //         O_pos_d <= O_pos_c;
-            //     end
-            // end
-            // else if(W_up) begin
-            //     if(O_pos_c == 2'b10) begin
-            //         O_pos_a <= O_pos_c;
-            //         O_pos_c <= O_pos_a;
-            //     end
-            //     else if(O_pos_d == 2'b10) begin
-            //         O_pos_b <= O_pos_d;
-            //         O_pos_d <= O_pos_b;
-            //     end
-            // end
-            // else if(W_down) begin
-            //     if(O_pos_a == 2'b10) begin
-            //         O_pos_c <= O_pos_a;
-            //         O_pos_a <= O_pos_c;
-            //     end
-            //     else if(O_pos_b == 2'b10) begin
-            //         O_pos_d <= O_pos_b;
-            //         O_pos_b <= O_pos_d;
-            //     end
-            // end
+
         end
     end
 end

@@ -31,16 +31,16 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Arv/puzzle/puzzle.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/Arv/Desktop/3.coe
-add_files c:/Users/Arv/Desktop/m.coe
+add_files C:/Users/Arv/Desktop/m.coe
 read_verilog -library xil_defaultlib {
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/async.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/check.v
+  C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/counter.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/flash_led.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/game_control.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/img_mem_ctrl.v
-  C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_counter.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/led_music_ctrl.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/music_led_top.v
