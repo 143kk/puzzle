@@ -17,7 +17,6 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,6 +31,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Users/Arv/puzzle/puzzle.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 add_files C:/Users/Arv/Desktop/3.coe
+add_files c:/Users/Arv/Desktop/m.coe
 read_verilog -library xil_defaultlib {
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/LFSR.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/anti_shake_single.v
@@ -47,6 +47,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/permutation.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_ctrl.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/pixel_transformer.v
+  C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/rand_pos.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/random_move.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/second_counter.v
   C:/Users/Arv/puzzle/puzzle.srcs/sources_1/new/vga.v

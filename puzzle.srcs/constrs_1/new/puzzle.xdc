@@ -80,9 +80,15 @@ set_property PACKAGE_PIN P1 [get_ports I_btn_left]
 set_property IOSTANDARD LVCMOS33 [get_ports O_completed]
 set_property PACKAGE_PIN E22 [get_ports O_completed]
 
-# Switch of enabling rand module
-set_property IOSTANDARD LVCMOS33 [get_ports I_rand_EN]
-set_property PACKAGE_PIN W4 [get_ports I_rand_EN]
+# Switch concerning random
+set_property IOSTANDARD LVCMOS33 [get_ports I_rand_move_EN]
+set_property PACKAGE_PIN W4 [get_ports I_rand_move_EN]
+set_property IOSTANDARD LVCMOS33 [get_ports I_rand_set_EN]
+set_property PACKAGE_PIN R4 [get_ports I_rand_set_EN]
+
+# Switch of hard mode
+set_property IOSTANDARD LVCMOS33 [get_ports I_hard_mode]
+set_property PACKAGE_PIN T4 [get_ports I_hard_mode]
 
 # counter & 7-seg tube by ljy
 set_property IOSTANDARD LVCMOS33 [get_ports {O_seg_en_time[0]}]

@@ -19,7 +19,9 @@ module top(
     input I_btn_down,
 
     output O_completed,
-    input I_rand_EN,
+    input I_rand_move_EN,
+    input I_rand_set_EN,
+    input I_hard_mode,
 
     // ljy
     output [3:0] O_seg_en_time,
@@ -45,12 +47,17 @@ module top(
     wire W_pixel_valid;
     wire [11:0] pixel_data_rgb444;
 
-    wire [1:0] pos_a;
-    wire [1:0] pos_b;
-    wire [1:0] pos_c;
-    wire [1:0] pos_d;
+    wire [3:0] pos_a;
+    wire [3:0] pos_b;
+    wire [3:0] pos_c;
+    wire [3:0] pos_d;
+    wire [3:0] pos_e;
+    wire [3:0] pos_f;
+    wire [3:0] pos_g;
+    wire [3:0] pos_h;  
+    wire [3:0] pos_i;
 
-    reg [4:0] num;
+    //reg [4:0] num;
 
     wire W_btn_left;
     wire W_btn_right;
@@ -155,10 +162,16 @@ module top(
         .I_pos_b(pos_b),
         .I_pos_c(pos_c),
         .I_pos_d(pos_d),
+        .I_pos_e(pos_e),
+        .I_pos_f(pos_f),
+        .I_pos_g(pos_g),
+        .I_pos_h(pos_h),
+        .I_pos_i(pos_i),
+
         .O_read_addr(read_addr),
-        
         .I_rst_n(I_rst_n),
-        .I_clk_25M(W_clk_25M)
+        .I_clk_25M(W_clk_25M),
+        .I_hard_mode(I_hard_mode)
     );
 
     game_control gamectrl_inst(
@@ -168,6 +181,12 @@ module top(
         .O_pos_b(pos_b),
         .O_pos_c(pos_c),
         .O_pos_d(pos_d),
+        .O_pos_e(pos_e),
+        .O_pos_f(pos_f),
+        .O_pos_g(pos_g),
+        .O_pos_h(pos_h),
+        .O_pos_i(pos_i),
+
         .O_completed(O_completed),
         
         .I_btn_set(I_btn_set), 
@@ -177,7 +196,9 @@ module top(
         .I_btn_down(W_btn_down),
         .I_black_EN(I_black_EN),
         .I_clk(W_clk_25M),
-        .I_rand_EN(I_rand_EN)
+        .I_rand_move_EN(I_rand_move_EN),
+        .I_rand_set_EN(I_rand_set_EN),
+        .I_hard_mode(I_hard_mode)
     );
 
     img_mem_ctrl imc_inst(
