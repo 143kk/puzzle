@@ -1,6 +1,6 @@
 # CS207 fall 2021 - Final Project
 
-**Members: ** Zhang, Z., Mo, Y., Lai, J.
+**Members:** Zhang, Z., Mo, Y., Lai, J.
 
 ## 小组选题
 
