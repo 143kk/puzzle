@@ -1,7 +1,7 @@
 # CS207 fall 2021 - Final Project
 
 **Team members:** Zhang, Z., Mo, Y., Lai, J.\
-**Score:** 110/100
+**Score:** 120(Full)
 
 ## 小组选题
 
