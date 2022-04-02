@@ -1,6 +1,7 @@
 # CS207 fall 2021 - Final Project
 
-**Members:** Zhang, Z., Mo, Y., Lai, J.
+**Team members:** Zhang, Z., Mo, Y., Lai, J.\
+**Score:** 110/100
 
 ## 小组选题
 
@@ -16,6 +17,7 @@
 - [x] 分块移动
 - [x] 拉黑区块
 - [x] 完成状态判断
+- [x] 困难模式
 - [x] And more...
 
 ## Link
